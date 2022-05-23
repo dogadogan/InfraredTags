@@ -170,7 +170,7 @@ You should only do this if you want to change the parameters for the ArUco detec
     <p align="center"> <img  height="450" src="https://github.com/HCIELab/InfraTags/blob/main/public/readme_img/oneplus_ir.png"> </p>
    - Note: if you do not see the IR camera, you may have to change the camera view to camera view 4 as seen in the top right of the image
    - It is important that once you are in camera view 4/IR camera view do not change views again. The app will freeze and you will need to restart the phone and resend the command to open the IR view again. 
-   - Finally, after all this is done navigate to the oneplus folder ([here](https://github.com/HCIELab/InfraTags/tree/main/public/oneplus)) and run onplus.py. This should open up a window on your PC, livestreaming the phone's screen.
+   - Finally, after all this is done navigate to the oneplus folder ([here](https://github.com/HCIELab/InfraTags/tree/main/public/oneplus)) and run oneplus.py. This should open up a window on your PC, livestreaming the phone's screen.
   
 ### Important: QR code detection
  - All the demo code above for detecting QR codes uses [Dynamsoft Barcode Reader (DBR)](https://www.dynamsoft.com/barcode-reader/overview/) in the backend. Our code comes with a 1-day public trial license which must be renewed after expiration. 
