@@ -13,12 +13,12 @@
 ### Using the Encoder
 #### 1) Open the Encoder_V1.gh file:
 <p align="center">
-  <img height="150" src="https://github.com/HCIELab/InfraTags/blob/main/public/readme_img/file.png">
+  <img height="150" src="readme_img/file.png">
 </p>
 
 #### 2) Import STL file:
 <p align="center">
-  <img  height="200" src="https://github.com/HCIELab/InfraTags/blob/main/public/readme_img/inputs_stl.png">
+  <img  height="200" src="/readme_img/inputs_stl.png">
 </p>
 
 #### 3) Import SVG (Here is where it gets complicated slightly)
