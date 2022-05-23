@@ -1,6 +1,8 @@
 # InfraredTags: Invisible AR Markers and Barcodes
 
    In this tutorial, we show how InfraredTags can be fabricated and decoded using low-cost, infrared-based 3D printing and imaging tools. While any 2D marker can be embedded as InfraredTags, we demonstrate the process for QR codes and ArUco markers. This research project has been published at the [2022 ACM CHI](https://chi2022.acm.org/) Conference on Human Factors in Computing Systems. Learn more about the project [here](https://hcie.csail.mit.edu/research/infraredtags/infraredtags.html).
+   
+   The tutorial consists of three steps: (1) embedding the marker into the 3D model of an object, (2) 3D printing the object, (3) decoding the tag from the printed object.
 
 <p align="center">
   <img  height="290" src="readme_img/InfraredTags_Teaser.png">
@@ -10,20 +12,21 @@
 ### Requirements
 - Rhino 3D (make sure it is version 6) and [Grasshopper 3D](https://www.rhino3d.com/download/archive/rhino-for-windows/6/latest/)
         - Once installed, follow the instructions to install the [Pufferfish plugin](https://github.com/HCIELab/InfraTags/tree/main/public/encoder/plugins/Pufferfish3-0)
-- Python and IDE (Any IDE will work, however, we use [pycharm](https://www.jetbrains.com/pycharm/download/#section=windows))
+- Python and IDE (Any IDE will work, however, we use [PyCharm](https://www.jetbrains.com/pycharm/download/#section=windows))
+- The instructions below are for the multi-material printing method, which gives the best results.
 ### Using the encoder
 #### 1) Open the Encoder_V1.gh file
 <p align="center">
   <img height="150" src="readme_img/file.png">
 </p>
 
-#### 2) Import STL file
+#### 2) Import STL file (3D model)
 <p align="center">
   <img  height="200" src="/readme_img/inputs_stl.png">
 </p>
 
-#### 3) Import SVG (here is where it gets slightly complicated)
-   -  The SVGs have to be in a specific format in order for our Grasshopper code to parse it (see [below](#svg-formating)).
+#### 3) Import SVG (2D tag/code)
+   -  The SVGs have to be in a specific format in order for our Grasshopper code to parse it (see [section below](#svg-formating)).
 
 <p align="center">
   <img  height="200" src="/readme_img/inputs_svg.png">
@@ -35,8 +38,9 @@
   <img  height="200" src="/readme_img/output_sm.png">
 </p>
 
-#### 4) Change the xyz coordinate of the point to move the code around on the surface of the object
-   - Best way to move a point is to simply set the coordinates by right clicking "Pt" on the inputs panel and then going to manage collection and typing a new point
+#### 4) Move the tag
+   - Change the xyz coordinate of the point to move the code around on the surface of the object.
+   - The best way to move a point is to simply set the coordinates by right clicking "Pt" on the inputs panel and then going to manage collection and typing a new point.
    - Due to a bug in the code, it is best to keep the point in the positive z-axis.
 
 
@@ -49,13 +53,15 @@
 
 
 
-#### 5) Set top layer thickness and air gap thickness (1.38mm and 1.92mm respectively for White PLA and IR PLA)
+#### 5) Set top layer thickness and air gap (tag) thickness
+   - We used 1.38mm and 1.92mm for White PLA and IR PLA, respectively.
+   - However, we recommend that you calibrate these values by first printing a test checkerboard as shown in the CHI'22 paper.
 
 #### 6) Export STLs:
-   - For single-material, right click "single material" and click "bake". For multi-material, right click on both "multi material" and "IR filament"
-   - A black wire mesh should appear in the perspective screen
-   - Simply highlight it with your mouse then navigate to File > Export selected and save somewhere in your file system
-   - Note: for multi material you need to bake and export each mesh seperatley that way you have both the internal PLA component and the outer IR PLA component. 
+   - For single-material, right click "single material" and click "bake". For multi-material, right click on both "multi material" and "IR filament".
+   - A black wire mesh should appear in the perspective screen.
+   - Simply highlight it with your mouse then navigate to File > Export selected and save somewhere in your file system.
+   - Note: For multi-material, you need to bake and export each mesh separately. That way, you will have both the internal PLA component and the outer IR PLA component. 
 <p align="center">
    <img  height="200" src="https://github.com/HCIELab/InfraTags/blob/main/public/readme_img/sm_save.png">
 </p>
@@ -68,17 +74,17 @@
 
 #### SVG formating
    - To format the SVG you have two options:
-      - Take the original SVG and parse it into paths of the following format: ```<path d="Mx,yhavbh-az"></path>```
+      - Difficult: Take the original SVG and parse it into paths of the following format: ```<path d="Mx,yhavbh-az"></path>```
          - x,y are the starting position 
          - A is horizontal length, b is vertical length
          - Ex:  ```<path d="M0,0h5v6h-5z"></path>``` 
-      - An easier solution is to use webisites that generate the codes automatically and some python :
-         - For QR codes use svgs generated by this library (https://www.nayuki.io/page/qr-code-generator-library).
-         - For Aruco get svgs from this library (https://chev.me/arucogen/) and then save the svg and keep track of its path then pass it into the "Aruco_to_Path.py" file changing the paths in line 84 and 85. 
+      - Easier solution: Use websites that generate the codes automatically and process them with our Python script:
+         - For QR codes, use SVGs generated by this page (https://www.nayuki.io/page/qr-code-generator-library).
+         - For ArUco, get SVGs from this page (https://chev.me/arucogen/). Save the SVG and pass it into the "Aruco_to_Path.py" file changing the paths in line 84 and 85.
 
 ## #2 Fabrication: 3D printing the object
 #### Materials
-   - Although our technique can be used with many filaments we recommend using white PLA and IR PLA ([link to IR pla](https://3dk.berlin/en/special/115-pla-filament-ir-black.html))
+   - Although our technique can be used with many filaments, we recommend using a standard white PLA for the tag, and IR PLA for the main geometry of the object including the top layer ([link to IR pla](https://3dk.berlin/en/special/115-pla-filament-ir-black.html)).
   
 #### 1) Open the Cura slicer (or any slicer that supports multi-material prints)
 
@@ -109,7 +115,7 @@
    - Once a Raspberry Pi and near-infrared camera are obtained. follow the instructions at this [link](https://tutorial.cytron.io/2020/12/29/raspberry-pi-zero-usb-webcam/) and follow the instructions to set up the pi + camera as a usb camera 
 #### Software
    - It is recommend that you use pycharm to run the decoder demos both for QR and Aruco, however the code can be run from a terminal 
-   - Have Python3 and pip3 pre-installed on your system link for this is [here](https://www.python.org/downloads/) version 3.6 or greater should work just fine
+   - Have Python 3 and pip3 pre-installed on your system link for this is [here](https://www.python.org/downloads/) version 3.6 or greater should work just fine
    - Run the following command in terminal:
       - ```pip install opencv-python numpy dbr opencv-contrib-python pyzbar```
    - Or in pycharm navigate to File > Settings > Project > Python Interpreter > Install packages (click the plus sign) and install the following packages:
@@ -136,9 +142,9 @@
    - [put pictures here dont have pi IR camera to put images]
   
 ### Calibratiing the Image Transforms for Aruco Code
-You should only do this if you want to change the Parameters for the Aroco detection
+You should only do this if you want to change the Parameters for the ArUco detection
    - Navigate to infrared_python_api and open irtags_calib.py 
-   - Navigate to line 17 and confirm VIDEO_STREAM is 1 for the usb IR camera
+   - Navigate to line 17 and confirm VIDEO_STREAM is 1 for the USB IR camera
    - A window with a panel should open on the right play around with the values until a code is detected 
    - Take note of these values, these values can be used to change the parameters for the image transforms
   
