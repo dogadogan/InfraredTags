@@ -1,0 +1,58 @@
+PUFFERFISH INSTALLATION INSTRUCTIONS
+
+by: Michael Pryor
+Instagrams: @ekimroyrp & @designmorphine
+
+
+FIRST STEPS:
+1. Delete any previous versions of Pufferfish you have installed.
+2. Unzip the Pufferfish3-0.zip file. (Make sure you actually unzip the file, do not just drag the Pufferfish3-0.gha out of the zip file viewer)
+3. UNBLOCK THE FILE - Right click the Pufferfish3-0.gha file > go to Properties > If you see a check box in the bottom right that says "Unblock", check it and hit Apply > OK.
+
+************************************************************************************************************************************************************************************************
+*************99.9999999999% of the time that a Grasshopper Plug-in won't install is because you forgot to unblock the .gha file, please make sure you do by following step 3 above!*************
+************************************************************************************************************************************************************************************************
+
+NEXT STEPS - for Rhino 5:
+1. You should be using atleast Rhino 5 SR12.
+2. Open Grasshopper and go to File > Special Folders > Components Folder (The folder it actually opens will be called LIBRARIES, not Components, DO NOT PUT PUFFERFISH IN THE FOLDER ACTUALLY CALLED COMPONENTS).
+3. Place the Pufferfish3-0.gha file in that Libraries folder.
+4. Completely close both Grasshopper and Rhino fully. 
+5. Launch Rhino, then Grasshopper, you should now have a Pufferfish tab in Grasshopper. 
+
+NEXT STEPS - for Rhino 6:
+1. If you have Rhino 5 also, just install the Pufferfish3-0.gha in Rhino 5 (follow Rhino 5 instructions above), Rhino 6 will pick it up automatically from there.
+2. Do not install the Pufferfish3-0.gha in both Rhino 5 and Rhino 6. 
+3. If you just have Rhino 6 then, Open Grasshopper and go to File > Special Folders > Components Folder (The folder it actually opens will be called LIBRARIES, not Components, DO NOT PUT PUFFERFISH IN THE FOLDER ACTUALLY CALLED COMPONENTS).
+4. Place the Pufferfish3-0.gha file in that Libraries folder.
+5. Completely close both Grasshopper and Rhino fully. 
+6. Launch Rhino, then Grasshopper, you should now have a Pufferfish tab in Grasshopper.
+
+NEXT STEPS - for Rhino 7:
+1. If you have Rhino 5 or 6 also, just install the Pufferfish3-0.gha in Rhino 5 or 6 (follow Rhino 5 or 6 instructions above), Rhino 7 WIP will pick it up automatically from there.
+2. Do not install the Pufferfish3-0.gha in more than one Rhino version. 
+3. If you just have Rhino 6 and Rhino 7 then, Open Grasshopper in Rhino 7 WIP and go to File > Special Folders > Components Folder (The folder it actually opens will be called LIBRARIES, not Components, DO NOT PUT PUFFERFISH IN THE FOLDER ACTUALLY CALLED COMPONENTS).
+4. Place the Pufferfish3-0.gha file in that Libraries folder.
+5. For installing the Pufferfish WIP SubD Components, Open Grasshopper in Rhino 7 and go to File > Special Folders > User Objects Folder, place the files from the "Pufferfish WIP SubD Components" folder into that User Objects Folder.
+6. Pufferfish WIP SubD Components REQUIRE PUFFERFISH3-0.gha TO BE INSTALLED TO WORK
+7. Completely close both Grasshopper and Rhino fully. 
+8. Launch Rhino, then Grasshopper, you should now have a Pufferfish tab in Grasshopper.
+
+ADDITIONAL:
+1. If you have followed the directions above and still have issues installing Pufferfish please try restarting your computer.
+2. If even then you have an installation problem double check that you have unblocked the Pufferfish3-0.gha".
+2. If even then you have an installation problem double check that the folder you have the Pufferfish3-0.gha in is called "Libraries" not "Components".
+3. If even then you have an installation problem then please email me at ekimroyrp@gmail.com with screenshots and detailed information about what you are seeing.
+4. Please send me an email with any bugs you find so I can correct them in future updates. 
+5. I love to see the stuff you are doing with Pufferfish, tag me on Instagram @ekimroyrp
+
+EXAMPLES:
+Be sure to download the Pufferfish 3.0 example files from the Food4Rhino Pufferfish page. There you will find two folders in the downloaded zip file:
+1. Components: Has an example of every component in Pufferfish.
+2. Workflow: Has bigger examples which incorporate Pufferfish components. 
+
+CONTACT:
+Feel free to reach out if you find any bugs, have a suggestion, or just to keep in touch:
+Email: ekimroyrp@gmail.com
+Instagram: https://www.instagram.com/ekimroyrp/ 
+           https://www.instagram.com/designmorphine/

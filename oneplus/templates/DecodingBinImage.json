@@ -1,0 +1,46 @@
+{
+    "Version":"3.0",
+    "ImageParameterContentArray":[
+      {
+        "Name": "Test",
+        "FormatSpecificationNameArray": [ "FP_1" ],
+        "ExpectedBarcodesCount": 1,
+        "MaxAlgorithmthreadCount": 4,
+        "TimeOut": 100000,
+        "BarcodeFormatIds": [ "BF_QR_CODE" ],
+        "ImagePreprocessingModes": [
+          {
+            "Mode": "IPM_GRAY_SMOOTH",
+            "SmoothBlockSizeX": 7,
+            "SmoothBlockSizeY": 7
+          },
+          {
+            "Mode": "IPM_MORPHOLOGY",
+            "MorphOpertaion": "close",
+            "MorphShape": "rectangle",
+            "MorphOperationKernelSizeX": 3,
+            "MorphOperationKernelSizeY": 3
+          }
+        ],
+        "BinarizationModes": [
+          {
+            "Mode": "BM_LOCAL_BLOCK"
+          },
+          {
+            "Mode": "BM_LOCAL_BLOCK",
+            "EnableFillBinaryVacancy": 0,
+            "ThreshValueCoefficient": 1
+          }
+        ],
+        "LocalizationModes": [ "LM_SCAN_DIRECTLY", "LM_CONNECTED_BLOCKS", "LM_LINES" ],
+        "DeblurLevel": 9
+      }
+    ],
+    "FormatSpecificationArray":[
+        {
+            "Name":"FP_1",
+            "BarcodeFormatIds":["BF_QR_CODE"],
+            "MirrorMode":"MM_BOTH"
+        }
+    ]
+}

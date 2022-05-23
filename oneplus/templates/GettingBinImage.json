@@ -1,0 +1,56 @@
+{
+    "Version":"3.0",
+    "ImageParameterContentArray":[
+      {
+        "Name": "Test",
+        "MaxAlgorithmthreadCount": 4,
+        "TimeOut": 100000,
+        "ScaleDownThreshold": 700,
+        "TextureDetectionModes": [
+          {
+            "Mode": "TDM_SKIP"
+          }
+        ],
+        "ImagePreprocessingModes": [
+          {
+            "Mode": "IPM_SHARPEN_SMOOTH",
+            "SharpenBlockSizeX": 3,
+            "SharpenBlockSizeY": 3,
+            "SmoothBlockSizeX": 5,
+            "SmoothBlockSizeY": 5
+          },
+          {
+            "Mode": "IPM_SHARPEN_SMOOTH",
+            "SharpenBlockSizeX": 3,
+            "SharpenBlockSizeY": 3,
+            "SmoothBlockSizeX": 3,
+            "SmoothBlockSizeY": 3
+          }
+        ],
+        "BinarizationModes": [
+          {
+            "Mode": "BM_LOCAL_BLOCK",
+            "BlockSizeX": 30,
+            "BlockSizeY": 30,
+            "EnableFillBinaryVacancy": 0,
+            "ThreshValueCoefficient": 1
+          },
+          {
+            "Mode": "BM_LOCAL_BLOCK",
+            "BlockSizeX": 8,
+            "BlockSizeY": 8,
+            "EnableFillBinaryVacancy": 0,
+            "ThreshValueCoefficient": 1
+          },
+          {
+            "Mode": "BM_LOCAL_BLOCK",
+            "BlockSizeX": 15,
+            "BlockSizeY": 15,
+            "EnableFillBinaryVacancy": 0,
+            "ThreshValueCoefficient": 0
+          }
+        ],
+        "LocalizationModes": [ "LM_CONNECTED_BLOCKS", "LM_SCAN_DIRECTLY" ]
+      }
+    ]
+}

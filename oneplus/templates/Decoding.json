@@ -1,0 +1,71 @@
+{
+    "Version":"3.0",
+    "ImageParameterContentArray":[
+      {
+        "Name": "Test",
+        "MaxAlgorithmthreadCount": 4,
+        "TimeOut": 20000,
+        "ScaleDownThreshold": 700,
+        "BarcodeFormatIds": [ "BF_QR_CODE" ],
+        "TerminatePhase": "TP_BARCODE_TYPE_DETERMINED",
+        "IntermediateResultTypes": [
+          "IRT_TYPED_BARCODE_ZONE"
+        ],
+        "IntermediateResultSavingMode": {
+          "Mode": "IRSM_MEMORY"
+        },
+        "ColourConversionModes": [
+          {
+            "Mode": "CICM_GENERAL"
+          }
+        ],
+        "GrayscaleTransformationModes": [
+          {
+            "Mode": "GTM_ORIGINAL"
+          },
+          {
+            "Mode": "GTM_INVERTED"
+          }
+        ],
+        "ImagePreprocessingModes": [
+          {
+            "Mode": "IPM_SHARPEN_SMOOTH",
+            "SharpenBlockSizeX": 3,
+            "SharpenBlockSizeY": 3,
+            "SmoothBlockSizeX": 3,
+            "SmoothBlockSizeY": 3
+          },
+          {
+            "Mode": "IPM_SHARPEN_SMOOTH",
+            "SharpenBlockSizeX": 3,
+            "SharpenBlockSizeY": 3,
+            "SmoothBlockSizeX": 7,
+            "SmoothBlockSizeY": 7
+          },
+          {
+            "Mode": "IPM_MORPHOLOGY",
+            "MorphOpertaion": "close",
+            "MorphShape": "rectangle",
+            "MorphOperationKernelSizeX": 3,
+            "MorphOperationKernelSizeY": 3
+          }
+        ],
+        "BinarizationModes": [
+          {
+            "Mode": "BM_LOCAL_BLOCK",
+            "BlockSizeX": 10,
+            "BlockSizeY": 10,
+            "EnableFillBinaryVacancy": 0,
+            "ThreshValueCoefficient": 2
+          },
+          {
+            "Mode": "BM_LOCAL_BLOCK",
+            "EnableFillBinaryVacancy": 0,
+            "ThreshValueCoefficient": 1
+          }
+        ],
+        "LocalizationModes": [ "LM_CONNECTED_BLOCKS", "LM_SCAN_DIRECTLY" ],
+        "DeblurLevel": 9
+      }
+    ]
+}
