@@ -6,12 +6,15 @@
    
    <sup>\*MIT and †Facebook Reality Labs</sup>
    
-   The tutorial consists of three steps: (1) embedding the marker into the 3D model of an object, (2) 3D printing the object, (3) decoding the tag from the printed object.
+   The tutorial consists of three steps: (1) embedding the marker into the 3D model of an object, (2) 3D printing the object, (3) decoding the tag from the printed object. If you use InfraredTags as part of your research, please cite it as follows.
+   
+   > <sup>Mustafa Doga Dogan, Ahmad Taka, Michael Lu, Yunyi Zhu, Akshat Kumar, Aakar Gupta, and Stefanie Mueller. 2022. InfraredTags: Embedding Invisible AR Markers and Barcodes Using Low-Cost, Infrared-Based 3D Printing and Imaging Tools. In CHI Conference on Human Factors in Computing Systems (CHI '22). Association for Computing Machinery, New York, NY, USA, Article 269, 1–12. https://doi.org/10.1145/3491102.3501951 </sup>
+
 
 <p align="center">
   <img  height="290" src="readme_img/InfraredTags_Teaser.png">
 </p>
-Our method allows users to embed (a) QR codes and (b) ArUco markers to store information in objects or to track them. The hidden markers are decoded from infrared camera images (c) using a convolutional neural network based on U-Net.
+<sup>Our method allows users to embed (a) QR codes and (b) ArUco markers to store information in objects or to track them. The hidden markers are decoded from infrared camera images (c) using a convolutional neural network based on U-Net.</sup>
 
 ## #1 CAD: Adding the tag into the object
 ### Requirements
