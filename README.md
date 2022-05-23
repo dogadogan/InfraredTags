@@ -7,6 +7,7 @@
 <p align="center">
   <img  height="290" src="readme_img/InfraredTags_Teaser.png">
 </p>
+Our method allows users to embed (a) QR codes and (b) ArUco markers to store information in objects or to track them. The hidden markers are decoded from infrared camera images (c) using a convolutional neural network based on U-Net.
 
 ## #1 CAD: Adding the tag into the object
 ### Requirements
@@ -153,7 +154,7 @@ You should only do this if you want to change the Parameters for the ArUco detec
    - OnePlus 8 Pro (found [here](https://www.oneplus.com/8-pro)) with Android 11. This phone has an embedded near-infrared camera. You can buy a used one from Amazon.
 
    #### Software
-   - ADB shell ([insallation guide](https://www.xda-developers.com/install-adb-windows-macos-linux/))
+   - ADB shell ([installation guide](https://www.xda-developers.com/install-adb-windows-macos-linux/))
    - Follow the steps to enable wireless debugging on the OnePlus and pair with your PC ([here](https://medium.com/android-news/wireless-debugging-through-adb-in-android-using-wifi-965f7edd163a))
    
    #### Decoding
@@ -163,7 +164,7 @@ You should only do this if you want to change the Parameters for the ArUco detec
     <p align="center"> <img  height="450" src="https://github.com/HCIELab/InfraTags/blob/main/public/readme_img/oneplus_ir.png"> </p>
    - Note: if you do not see the IR camera, you may have to change the camera view to camera view 4 as seen in the top right of the image
    - It is important that once you are in camera view 4/IR camera view do not change views again. The app will freeze and you will need to restart the phone and resend the command to open the IR view again. 
-   - Finally, after all this is done navigate to the oneplus folder ([here](https://github.com/HCIELab/InfraTags/tree/main/public/oneplus)) and run onplus.py. This should open up a window on your PC, livestreaming the oneplus' screen
+   - Finally, after all this is done navigate to the oneplus folder ([here](https://github.com/HCIELab/InfraTags/tree/main/public/oneplus)) and run onplus.py. This should open up a window on your PC, livestreaming the phone's screen.
   
 ### QR code detection
  - All the demo code above for detecting QR codes uses [Dynamsoft Barcode Reader (DBR)](https://www.dynamsoft.com/barcode-reader/overview/) in the backend. Our code comes with a 1-day public trial license which must be renewed after expiration. 
