@@ -1,6 +1,10 @@
 # InfraredTags Tutorial
    InfraredTags is a low cost way to detect unobtrusive tags. The project has been published at the 2022 ACM CHI Conference on Human Factors in Computing Systems. Learn more about the project [here](https://hcie.csail.mit.edu/research/infraredtags/infraredtags.html)
 
+<p align="center">
+  <img  height="200" src="https://github.com/HCIELab/InfraTags/blob/main/public/readme_img/InfraredTags_Teaser.png">
+</p>
+
 ## #1 CAD: Adding the tag into the object
 ### Requirements
 - Rhino 6 3D  (make sure its version 6) and [grasshopper](https://www.rhino3d.com/download/archive/rhino-for-windows/6/latest/)
