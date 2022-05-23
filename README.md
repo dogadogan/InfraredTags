@@ -2,6 +2,10 @@
 
    In this tutorial, we show how InfraredTags can be fabricated and decoded using low-cost, infrared-based 3D printing and imaging tools. While any 2D marker can be embedded as InfraredTags, we demonstrate the process for QR codes and ArUco markers. This research project has been published at the [2022 ACM CHI](https://chi2022.acm.org/) Conference on Human Factors in Computing Systems. Learn more about the project [here](https://hcie.csail.mit.edu/research/infraredtags/infraredtags.html).
    
+   <sub>By [Mustafa Doga Dogan](https://www.dogadogan.com/)\*, Ahmad Taka\*, Veerapatr Yotamornsunthorn\*, Michael Lu\*, [Yunyi Zhu](http://www.yunyizhu.info/)\*, Akshat Kumar\*, [Aakar Gupta](https://aakargupta.com/)†, [Stefanie Mueller](https://hcie.csail.mit.edu/stefanie-mueller.html)\*</sub>
+   
+   <sup>\*MIT and †Facebook Reality Labs</sup>
+   
    The tutorial consists of three steps: (1) embedding the marker into the 3D model of an object, (2) 3D printing the object, (3) decoding the tag from the printed object.
 
 <p align="center">
@@ -39,7 +43,7 @@ Our method allows users to embed (a) QR codes and (b) ArUco markers to store inf
   <img  height="200" src="/readme_img/output_sm.png">
 </p>
 
-#### 4) Move the tag
+#### 4) Move the tag as desired
    - Change the xyz coordinate of the point to move the code around on the surface of the object.
    - The best way to move a point is to simply set the coordinates by right clicking "Pt" on the inputs panel and then going to manage collection and typing a new point.
    - Due to a bug in the code, it is best to keep the point in the positive z-axis.
@@ -53,12 +57,11 @@ Our method allows users to embed (a) QR codes and (b) ArUco markers to store inf
 </p>
 
 
-
 #### 5) Set top layer thickness and air gap (tag) thickness
    - We used 1.38mm and 1.92mm for White PLA and IR PLA, respectively.
    - However, we recommend that you calibrate these values by first printing a test checkerboard as shown in the CHI'22 paper.
 
-#### 6) Export STLs:
+#### 6) Export generated STLs:
    - For single-material, right click "single material" and click "bake". For multi-material, right click on both "multi material" and "IR filament".
    - A black wire mesh should appear in the perspective screen.
    - Simply highlight it with your mouse then navigate to File > Export selected and save somewhere in your file system.
@@ -73,7 +76,7 @@ Our method allows users to embed (a) QR codes and (b) ArUco markers to store inf
    <img  height="200" src="https://github.com/HCIELab/InfraTags/blob/main/public/readme_img/code_mesh.png">
 </p>
 
-#### SVG formating
+#### Important: SVG formating
    - To format the SVG you have two options:
       - Difficult: Take the original SVG and parse it into paths of the following format: ```<path d="Mx,yhavbh-az"></path>```
          - x,y are the starting position 
@@ -105,6 +108,9 @@ Our method allows users to embed (a) QR codes and (b) ArUco markers to store inf
 <p align="center">
    <img  height="200" src="https://github.com/HCIELab/InfraTags/blob/main/public/readme_img/slr_gcode.png">
 </p>
+   
+   Now you can send the job to the 3D printer!
+
 
 ## #3 Detection: Reading the tags
 #### Materials
@@ -113,7 +119,7 @@ Our method allows users to embed (a) QR codes and (b) ArUco markers to store inf
  - Micro-USB to USB type A cable [(link)](https://www.amazon.com/AmazonBasics-Male-Micro-Cable-Black/dp/B07232M876/ref=sr_1_3?keywords=micro+usb+to+usb&qid=1653020580&sr=8-3)
  - (Optional) 3D printed camera case to house all parts [(link)](https://github.com/HCIELab/InfraTags/tree/main/public/hardware/Camera_Case)
 #### Hardware 
-   - Once a Raspberry Pi and near-infrared camera are obtained. follow the instructions at this [link](https://tutorial.cytron.io/2020/12/29/raspberry-pi-zero-usb-webcam/) and follow the instructions to set up the pi + camera as a usb camera 
+   - Once a Raspberry Pi and near-infrared camera are obtained, follow the instructions at this [link](https://tutorial.cytron.io/2020/12/29/raspberry-pi-zero-usb-webcam/) and follow the instructions to set up the pi + camera as a usb camera 
 #### Software
    - It is recommend that you use pycharm to run the decoder demos both for QR and Aruco, however the code can be run from a terminal 
    - Have Python 3 and pip3 pre-installed on your system link for this is [here](https://www.python.org/downloads/) version 3.6 or greater should work just fine
@@ -126,29 +132,30 @@ Our method allows users to embed (a) QR codes and (b) ArUco markers to store inf
       - opencv-contrib-python
       - pyzbar
 
-## Using the Decoder
-### QR code
+
+## Using the decoder
+### Reading QR codes
    - Navigate to qr_demo > qr_demo.py 
    - Open the file in an editor
    - Navigate to line 22 and confirm that CAMERA_STREAM is 1, indicating the usb camera
    - You should see a window popup in your screen if everything went alright 
    - There should also be a terminal outputting data on whether a code was detected or not
-
-### ArUco
+   
+### Reading ArUco markers
    - Navigate to aruco_demo > aruco_demo.py
    - Open the file in an editor
    - Navigate to line 20 and confirm that CAMERA_STREAM is 1, indicating the usb camera
    - You should see a window popup in your screen if everything went alright
    - There should also be a terminal outputting data on whether a code was detected or not
-
-### Calibratiing the Image Transforms for Aruco Code
-You should only do this if you want to change the Parameters for the ArUco detection
+  
+### Calibrating the image transforms for ArUco markers
+You should only do this if you want to change the parameters for the ArUco detection
    - Navigate to infrared_python_api and open irtags_calib.py 
    - Navigate to line 17 and confirm VIDEO_STREAM is 1 for the USB IR camera
    - A window with a panel should open on the right play around with the values until a code is detected 
    - Take note of these values, these values can be used to change the parameters for the image transforms
   
-### OnePlus
+### Optional: Using a smartphone to decode the tags
    #### Hardware
    - OnePlus 8 Pro (found [here](https://www.oneplus.com/8-pro)) with Android 11. This phone has an embedded near-infrared camera. You can buy a used one from Amazon.
 
@@ -157,7 +164,7 @@ You should only do this if you want to change the Parameters for the ArUco detec
    - Follow the steps to enable wireless debugging on the OnePlus and pair with your PC ([here](https://medium.com/android-news/wireless-debugging-through-adb-in-android-using-wifi-965f7edd163a))
    
    #### Decoding
-   - Once everything is installed, and you have paired the OnePlus to your computer via adb, you can run this command to get the IR camera show up:
+   - Once everything is installed, and you have paired the OnePlus phone to your computer via adb, you can run this command to get the IR camera show up:
    ```adb shell am start -n com.oneplus.factorymode/.camera.manualtest.CameraManualTest``` (more detail [here](https://www.xda-developers.com/oneplus-8-pro-color-filter-camera-still-accessible-adb-command/))
    - You should see the IR stream open on the OnePlus:
     <p align="center"> <img  height="450" src="https://github.com/HCIELab/InfraTags/blob/main/public/readme_img/oneplus_ir.png"> </p>
@@ -165,7 +172,7 @@ You should only do this if you want to change the Parameters for the ArUco detec
    - It is important that once you are in camera view 4/IR camera view do not change views again. The app will freeze and you will need to restart the phone and resend the command to open the IR view again. 
    - Finally, after all this is done navigate to the oneplus folder ([here](https://github.com/HCIELab/InfraTags/tree/main/public/oneplus)) and run onplus.py. This should open up a window on your PC, livestreaming the phone's screen.
   
-### QR code detection
+### Important: QR code detection
  - All the demo code above for detecting QR codes uses [Dynamsoft Barcode Reader (DBR)](https://www.dynamsoft.com/barcode-reader/overview/) in the backend. Our code comes with a 1-day public trial license which must be renewed after expiration. 
  - If you do not renew the license, you will get only partial decoding of messages.
  - To update the license key navigate to the dbr_decode.py file for each demo and change the license key variable (line 4 of dbr_decode.py).
