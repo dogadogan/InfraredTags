@@ -2,7 +2,7 @@
    InfraredTags is a low cost way to detect unobtrusive tags. The project has been published at the 2022 ACM CHI Conference on Human Factors in Computing Systems. Learn more about the project [here](https://hcie.csail.mit.edu/research/infraredtags/infraredtags.html)
 
 <p align="center">
-  <img  height="200" src="https://github.com/HCIELab/InfraTags/blob/main/public/readme_img/InfraredTags_Teaser.png">
+  <img  height="200" src="readme_img/InfraredTags_Teaser.png">
 </p>
 
 ## #1 CAD: Adding the tag into the object
@@ -25,13 +25,13 @@
    -  the SVGs have to be in a very specific format in order for our Grasshopper code to parse it (see below) 
 
 <p align="center">
-  <img  height="200" src="https://github.com/HCIELab/InfraTags/blob/main/public/readme_img/inputs_svg.png">
+  <img  height="200" src="/readme_img/inputs_svg.png">
 </p>
 
 - Once imported you should see this:
 
 <p align="center">
-  <img  height="200" src="https://github.com/HCIELab/InfraTags/blob/main/public/readme_img/output_sm.png">
+  <img  height="200" src="/readme_img/output_sm.png">
 </p>
 
 #### 4) Change the x,y,z coordinate of the point to move the code around on the surface of the object.
