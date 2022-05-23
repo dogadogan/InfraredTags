@@ -125,6 +125,7 @@ Our method allows users to embed (a) QR codes and (b) ArUco markers to store inf
       - dbr
       - opencv-contrib-python
       - pyzbar
+
 ## Using the Decoder
 ### QR code
    - Navigate to qr_demo > qr_demo.py 
@@ -132,16 +133,14 @@ Our method allows users to embed (a) QR codes and (b) ArUco markers to store inf
    - Navigate to line 22 and confirm that CAMERA_STREAM is 1, indicating the usb camera
    - You should see a window popup in your screen if everything went alright 
    - There should also be a terminal outputting data on whether a code was detected or not
-   - [put pictures here dont have pi IR camera to put images]
-   
+
 ### ArUco
    - Navigate to aruco_demo > aruco_demo.py
    - Open the file in an editor
    - Navigate to line 20 and confirm that CAMERA_STREAM is 1, indicating the usb camera
    - You should see a window popup in your screen if everything went alright
    - There should also be a terminal outputting data on whether a code was detected or not
-   - [put pictures here dont have pi IR camera to put images]
-  
+
 ### Calibratiing the Image Transforms for Aruco Code
 You should only do this if you want to change the Parameters for the ArUco detection
    - Navigate to infrared_python_api and open irtags_calib.py 
