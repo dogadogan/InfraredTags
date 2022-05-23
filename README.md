@@ -1,8 +1,8 @@
 # InfraredTags Tutorial
-   InfraredTags is a low cost way to detect unobtrusive tags. The project has been published at the 2022 ACM CHI Conference on Human Factors in Computing Systems. Learn more about the project [here](https://hcie.csail.mit.edu/research/infraredtags/infraredtags.html)
+   InfraredTags is a low cost way to detect unobtrusive tags. The project has been published at the 2022 ACM CHI Conference on Human Factors in Computing Systems. Learn more about the project [here](https://hcie.csail.mit.edu/research/infraredtags/infraredtags.html).
 
 <p align="center">
-  <img  height="200" src="readme_img/InfraredTags_Teaser.png">
+  <img  height="290" src="readme_img/InfraredTags_Teaser.png">
 </p>
 
 ## #1 CAD: Adding the tag into the object
