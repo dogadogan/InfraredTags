@@ -191,7 +191,7 @@ You should only do this if you want to change the parameters for the ArUco detec
 <p align="center">
    <img  height="200" src="/readme_img/camera_fully_assembled.png">
 </p>
-<sup>This is a preview of the object in Cura Slicer</sup>
+<sup>Fully assembled custom IR camera module with IR LEDs</sup>
 
 ### Required hardware
 <i>Optional items or tools are for the addition of IR LEDs</i>
