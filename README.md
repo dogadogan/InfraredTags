@@ -190,8 +190,8 @@ You should only do this if you want to change the parameters for the ArUco detec
 
 <p align="center">
    <img  height="200" src="/readme_img/camera_fully_assembled.png">
+    <sup> Fully assembled custom IR camera module with IR LEDs</sup>
 </p>
-<sup>Fully assembled custom IR camera module with IR LEDs</sup>
 
 ### Required hardware
 <i>Optional items or tools are for the addition of IR LEDs</i>
