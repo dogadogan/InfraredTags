@@ -197,6 +197,7 @@ You should only do this if you want to change the parameters for the ArUco detec
 <p align="center">
  <sup> Fully assembled custom IR camera module with IR LEDs</sup>
 </p>
+
 ### Required hardware
 <i>Optional items or tools are for the addition of IR LEDs</i>
 - Raspberry PI Zero ([link]())
