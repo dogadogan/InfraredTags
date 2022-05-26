@@ -43,8 +43,9 @@
 - Once imported you should see this:
 
 <p align="center">
-  <img  height="200" src="/readme_img/output_sm.png">
+  <img  height="200" src="/readme_img/output_sm_labeled.png">
 </p>
+<sup>Rhino object with code embedded in it. Point is used to orient the code over the object.</sup>
 
 #### 4) Move the tag as desired
    - Change the xyz coordinate of the point to move the code around on the surface of the object.
@@ -53,10 +54,10 @@
 
 
 <p align="center">
-  <img  height="200" src="https://github.com/HCIELab/InfraTags/blob/main/public/readme_img/input_pt.png">
+  <img  height="200" src="/readme_img/input_pt.png">
 </p>
 <p align="center">
-  <img  height="200" src="https://github.com/HCIELab/InfraTags/blob/main/public/readme_img/input_manage_collection.png">
+  <img  height="200" src="/readme_img/input_manage_collection.png">
 </p>
 
 
@@ -70,14 +71,17 @@
    - Simply highlight it with your mouse then navigate to File > Export selected and save somewhere in your file system.
    - Note: For multi-material, you need to bake and export each mesh separately. That way, you will have both the internal PLA component and the outer IR PLA component. 
 <p align="center">
-   <img  height="200" src="https://github.com/HCIELab/InfraTags/blob/main/public/readme_img/sm_save.png">
+   <img  height="200" src="/readme_img/sm_save.png">
 </p>
 <p align="center">
-   <img  height="200" src="https://github.com/HCIELab/InfraTags/blob/main/public/readme_img/sm_mesh.png">
+   <img  height="200" src="/readme_img/sm_mesh.png">
 </p>
+<sup>Object mesh with code inside</sup>
+
 <p align="center">
-   <img  height="200" src="https://github.com/HCIELab/InfraTags/blob/main/public/readme_img/code_mesh.png">
+   <img  height="200" src="/readme_img/code_mesh.png">
 </p>
+<sup>Code mesh</sup>
 
 #### Important: SVG formating
    - To format the SVG you have two options:
@@ -104,12 +108,12 @@
 #### 3) Arrange and slice   
     
 <p align="center">
-   <img  height="200" src="https://github.com/HCIELab/InfraTags/blob/main/public/readme_img/slr_arrange.png">
+   <img  height="200" src="/readme_img/slr_arrange.png">
 </p>
 
-
+<sup>This is a preview of the object in Cura Slicer</sup>
 <p align="center">
-   <img  height="200" src="https://github.com/HCIELab/InfraTags/blob/main/public/readme_img/slr_gcode.png">
+   <img  height="200" src="/readme_img/slr_gcode.png">
 </p>
    
    Now you can send the job to the 3D printer!
@@ -180,3 +184,33 @@ You should only do this if you want to change the parameters for the ArUco detec
  - If you do not renew the license, you will get only partial decoding of messages.
  - To update the license key navigate to the dbr_decode.py file for each demo and change the license key variable (line 4 of dbr_decode.py).
  
+## #4 Setting up the USB Webcam
+
+### Required hardware
+<i>Optional items or tools are for the addition of IR LEDs</i>
+- Raspberry PI Zero ([link]())
+- NoIR Camera ([link]())
+- 3 x 2mm Neodymium magnets ([link]())
+- (Optional) 2 OSRam IR LEDs 451AS ([link]())
+- (Optional) Male to Female Jumper Wires ([link]())
+- Resistors ([link]())
+- Wires ([link]())
+- M3 screws and nuts ([link]())
+- M2 screws and nuts ([link]())
+- IR Filter ([link]())
+### Tools
+- Small Hammer 
+- (Optional) Super Glue ([link]())
+- (Optional) Soldering Iron and solder 
+### 3D printing instructions
+ - Print the STLs in the Camera Case V2 folder  (hardware > Camera_Case > STL > V2)
+ - It is recommended you use 20% infill with any choice of filament
+### Assembly Instructions without IR LEDs
+ 1) Once all things are printed use 4 hex M2x5mm screws and nuts to mount the camera to the camera mount 3D Printed Part
+ 2) Mount Raspberry Pi to the Camera Case Body using 4 M3x5mm screws and nuts 
+ 3) Plug the Camera into the Raspberry PI Zero making sure the cable stays within the Camera Case body
+ 4) Screw the camera mount into the main case for the Raspberry PI with M3x5mm screws
+ 5) Next we need to place the magnets in the case, to do this get a small hammer and gently place them into the holes at the top of the case and in the bottom of the filter mount. Make sure magnets in case and the mount are oppositely polarized! Take your time with this step there is no easy way to remove the magnets so If anything were to happen you may have to discard the case.
+ 6) Similarly to Step 5 place the magnets for filter cover. Again make sure the magnets between the cover and mount are oppositely polarized and take your time with this step.
+ 7) Next follow the instructions to make the PI a usb camera ([link](https://tutorial.cytron.io/2020/12/29/raspberry-pi-zero-usb-webcam/))
+ 8) If everything went well you should be able to place the filter mount on top of the main case housing the PI and then plug a usb into the PI and access the camera as a regular USB camera
