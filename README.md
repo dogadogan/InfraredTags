@@ -45,7 +45,9 @@
 <p align="center">
   <img  height="200" src="/readme_img/output_sm_labeled.png">
 </p>
-<sup>Rhino object with code embedded in it. Point is used to orient the code over the object.</sup>
+<p align="center">
+    <sup>Rhino object with code embedded in it. Point is used to orient the code over the object.</sup>
+</p>
 
 #### 4) Move the tag as desired
    - Change the xyz coordinate of the point to move the code around on the surface of the object.
@@ -76,8 +78,9 @@
 <p align="center">
    <img  height="200" src="/readme_img/sm_mesh.png">
 </p>
-<sup>Object mesh with code inside</sup>
-
+<p align="center">
+    <sup>Object mesh with code inside</sup>
+</p>
 <p align="center">
    <img  height="200" src="/readme_img/code_mesh.png">
 </p>
@@ -110,9 +113,9 @@
 <p align="center">
    <img  height="200" src="/readme_img/slr_arrange.png">
 </p>
-
+<p align="center">
 <sup>This is a preview of the object in Cura Slicer</sup>
-
+</p>
 <p align="center">
    <img  height="200" src="/readme_img/slr_gcode.png">
 </p>
@@ -190,9 +193,10 @@ You should only do this if you want to change the parameters for the ArUco detec
 
 <p align="center">
    <img  height="200" src="/readme_img/camera_fully_assembled.png">
-    <sup> Fully assembled custom IR camera module with IR LEDs</sup>
 </p>
-
+<p align="center">
+ <sup> Fully assembled custom IR camera module with IR LEDs</sup>
+</p>
 ### Required hardware
 <i>Optional items or tools are for the addition of IR LEDs</i>
 - Raspberry PI Zero ([link]())
