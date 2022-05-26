@@ -112,6 +112,7 @@
 </p>
 
 <sup>This is a preview of the object in Cura Slicer</sup>
+
 <p align="center">
    <img  height="200" src="/readme_img/slr_gcode.png">
 </p>
@@ -185,6 +186,12 @@ You should only do this if you want to change the parameters for the ArUco detec
  - To update the license key navigate to the dbr_decode.py file for each demo and change the license key variable (line 4 of dbr_decode.py).
  
 ## #4 Setting up the USB Webcam
+
+
+<p align="center">
+   <img  height="200" src="/readme_img/camera_fully_assembled.png">
+</p>
+<sup>This is a preview of the object in Cura Slicer</sup>
 
 ### Required hardware
 <i>Optional items or tools are for the addition of IR LEDs</i>
