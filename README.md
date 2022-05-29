@@ -128,11 +128,11 @@
  - Raspberry Pi NoIR Camera [(link)](https://www.amazon.com/kuman-Raspberry-Camera-Module-Supports/dp/B0759GYR51/ref=sr_1_25?crid=IJE0D6SB8AQG&keywords=PI+noir+5MP&qid=1653020486&s=electronics&sprefix=pi+noir+5mp%2Celectronics%2C88&sr=1-25)
  - Raspberry Pi Zero [(link)](https://www.raspberrypi.com/products/raspberry-pi-zero/)
  - Micro-USB to USB type A cable [(link)](https://www.amazon.com/AmazonBasics-Male-Micro-Cable-Black/dp/B07232M876/ref=sr_1_3?keywords=micro+usb+to+usb&qid=1653020580&sr=8-3)
- - (Optional) 3D printed camera case to house all parts [(link)](https://github.com/HCIELab/InfraTags/tree/main/public/hardware/Camera_Case)
+ - (Optional) 3D printed camera case to house all parts ([link](#4%20Setting%20up%20the%20USB%20Webcam)) <i>See Section 4 for further instructions on setting up USB webcam</i>
 #### Hardware 
-   - Once a Raspberry Pi and near-infrared camera are obtained, follow the instructions at this [link](https://tutorial.cytron.io/2020/12/29/raspberry-pi-zero-usb-webcam/) and follow the instructions to set up the pi + camera as a usb camera 
+   - Once a Raspberry Pi and near-infrared camera are obtained, follow the instructions in [Section 4](#4%20Setting%20up%20the%20USB%20Webcam) and follow the instructions to set up the pi + camera as a USB camera 
 #### Software
-   - It is recommend that you use pycharm to run the decoder demos both for QR and Aruco, however the code can be run from a terminal 
+   - It is recommended that you use pycharm to run the decoder demos both for QR and Aruco, however the code can be run from a terminal 
    - Have Python 3 and pip3 pre-installed on your system link for this is [here](https://www.python.org/downloads/) version 3.6 or greater should work just fine
    - Run the following command in terminal:
       - ```pip install opencv-python numpy dbr opencv-contrib-python pyzbar```
@@ -148,21 +148,24 @@
 ### Reading QR codes
    - Navigate to qr_demo > qr_demo.py 
    - Open the file in an editor
-   - Navigate to line 22 and confirm that CAMERA_STREAM is 1, indicating the usb camera
+   - Navigate to line 22 and confirm that CAMERA_STREAM is the same as the IR webcam ID
+     - <i>CAMERA_STREAM = 1 works, depending on the computer. On some computers it can be 0 or 2 etc. based on if there is one or more internal webcams. </i>
    - You should see a window popup in your screen if everything went alright 
    - There should also be a terminal outputting data on whether a code was detected or not
    
 ### Reading ArUco markers
    - Navigate to aruco_demo > aruco_demo.py
    - Open the file in an editor
-   - Navigate to line 20 and confirm that CAMERA_STREAM is 1, indicating the usb camera
+   - Navigate to line 20 and confirm that CAMERA_STREAM is the same as the IR webcam ID
+     - <i>CAMERA_STREAM = 1 works, depending on the computer. On some computers it can be 0 or 2 etc. based on if there is one or more internal webcams. </i>
    - You should see a window popup in your screen if everything went alright
    - There should also be a terminal outputting data on whether a code was detected or not
   
 ### Calibrating the image transforms for ArUco markers
 You should only do this if you want to change the parameters for the ArUco detection
    - Navigate to infrared_python_api and open irtags_calib.py 
-   - Navigate to line 17 and confirm VIDEO_STREAM is 1 for the USB IR camera
+   - Navigate to line 17 and confirm that VIDEO_STREAM is the same as the IR webcam ID
+     - <i>VIDEO_STREAM = 1 works, depending on the computer. On some computers it can be 0 or 2 etc. based on if there is one or more internal webcams. </i>
    - A window with a panel should open on the right play around with the values until a code is detected 
    - Take note of these values, these values can be used to change the parameters for the image transforms
   
@@ -241,7 +244,7 @@ You should only do this if you want to change the parameters for the ArUco detec
    <img  height="300" src="/readme_img/step_4_assembly_process.gif">
 </p>
 
- 7) Next follow the instructions to make the PI a usb camera ([link](https://tutorial.cytron.io/2020/12/29/raspberry-pi-zero-usb-webcam/))
+ 7) Next follow the instructions to make the PI a USB camera ([link](https://tutorial.cytron.io/2020/12/29/raspberry-pi-zero-usb-webcam/))
  8) If everything went well you should be able to plug a Micro-USB to USB-Type-A cable into the PI and access the camera as a regular USB camera
 ### Assembly Instructions <i>with</i> IR LEDs
  <i>It is recommended that you have some experience with circuits prior to this assembly.</i>
