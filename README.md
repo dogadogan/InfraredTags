@@ -245,10 +245,11 @@ You should only do this if you want to change the parameters for the ArUco detec
 ### Assembly Instructions <i>with</i> IR LEDs
  <i>It is recommended that you have some experience with circuits prior to this assembly.</i>
  1) First cut 4 male-to-female jumper wires in half then strip the ends of the wire.
- 2) Next pre-tin the wires.
- 3) Next take the tiny 4716AS Osram LEDs and pre-tin the pads on the IR LED.
+ 2) Next pre-tin the half wires.
+ 3) Next take 2 tiny 4716AS Osram LEDs and pre-tin the pads on the IR LED.
  4) Next Solder two of the male-half jumper (from step 1) wires to the anode and cathode path of IR LED, keep track of which wire is which.
- 5) Next Solder the 2.2K Resistors to the +5V pad on the PI Zero.
+ 5) Do Step 4 again for the second IR LED.
+ 6) Next Solder two of the 2.2K Resistors to the +5V pad on the PI Zero, result is two parallel voltage dividers.
 <p align="center">
    <img  height="200" src="/readme_img/pi_zero_pads.png">
 </p>
