@@ -200,29 +200,67 @@ You should only do this if you want to change the parameters for the ArUco detec
 
 ### Required hardware
 <i>Optional items or tools are for the addition of IR LEDs</i>
-- Raspberry PI Zero ([link]())
-- NoIR Camera ([link]())
-- 3 x 2mm Neodymium magnets ([link]())
-- (Optional) 2 OSRam IR LEDs 451AS ([link]())
-- (Optional) Male to Female Jumper Wires ([link]())
-- Resistors ([link]())
-- Wires ([link]())
-- M3 screws and nuts ([link]())
-- M2 screws and nuts ([link]())
-- IR Filter ([link]())
+ - 1 Raspberry Pi NoIR Camera [(link)](https://www.amazon.com/kuman-Raspberry-Camera-Module-Supports/dp/B0759GYR51/ref=sr_1_25?crid=IJE0D6SB8AQG&keywords=PI+noir+5MP&qid=1653020486&s=electronics&sprefix=pi+noir+5mp%2Celectronics%2C88&sr=1-25)
+ - 1 Raspberry Pi Zero [(link)](https://www.raspberrypi.com/products/raspberry-pi-zero/)
+ - 1 Micro-USB to USB type A cable [(link)](https://www.amazon.com/AmazonBasics-Male-Micro-Cable-Black/dp/B07232M876/ref=sr_1_3?keywords=micro+usb+to+usb&qid=1653020580&sr=8-3)
+ - 8 3mm x 2mm Neodymium magnets ([link](https://www.amazon.com/MEALOS-Magnets-3mmx2mm-Miniatures-Storage/dp/B08NZTN426/ref=sr_1_4?keywords=3x2+neodymium+magnets&qid=1653776539&sprefix=3x2+ne%2Caps%2C69&sr=8-4))
+ - 8 6mm x 3mm Neodymium magnets ([link](https://www.amazon.com/FINDMAG-Magnets-Magnetic-Whiteboard-Refrigerator/dp/B08M3YP56J/ref=sr_1_5?keywords=6x3+neodymium+magnets&qid=1653776634&sprefix=6x3+ne%2Caps%2C58&sr=8-5))
+ - (Optional) 2 OSRam IR LEDs 4716AS ([link](https://www.osram.com/ecat/OSLON%C2%AE%20Black%20SFH%204716AS/com/en/class_pim_web_catalog_103489/prd_pim_device_2219877/))
+ - (Optional) Male to Female Jumper Wires ([link](https://www.amazon.com/EDGELEC-Breadboard-Optional-Assorted-Multicolored/dp/B07GD2PGY4/ref=sr_1_3?keywords=male%2Bto%2Bfemale%2Bjumper%2Bwires&qid=1653810024&sprefix=male%2Bto%2Bfemale%2Bjump%2Caps%2C74&sr=8-3&th=1))
+ - (Optional) 2 2.2K Ohm Resistors ([link](https://www.amazon.com/EDGELEC-Resistor-Tolerance-Multiple-Resistance/dp/B07QH5QTPK/ref=sr_1_3?keywords=2.2k+resistor&qid=1653810071&sprefix=2.2k+resi%2Caps%2C67&sr=8-3))
+ - (Optional) 8 M3x4mm screws and nuts ([link](https://www.amazon.com/DYWISHKEY-Pieces-Stainless-Socket-Assortment/dp/B07VNDFYNQ/ref=sr_1_5?keywords=m3+hex+screws&qid=1653810295&sprefix=m3+hex+%2Caps%2C67&sr=8-5))
+ - 8 M2x6mm screws and nuts ([link](https://www.amazon.com/DYWISHKEY-Pieces-Socket-Screws-Wrench/dp/B07W5J19Y5/ref=sr_1_3?crid=99RN2D0GXV0G&keywords=m2+hex&qid=1653810350&sprefix=m2+hex%2Caps%2C62&sr=8-3))
+ - IR Filter ([link](https://www.amazon.com/Infrared-Filter-58mm-Optical-Glass/dp/B08N8N989H/ref=sr_1_3?crid=37VJY38ITGR7A&keywords=ir+filters&qid=1653810156&sprefix=ir+filters%2Caps%2C56&sr=8-3))
 ### Tools
 - Small Hammer 
-- (Optional) Super Glue ([link]())
-- (Optional) Soldering Iron and solder 
+- (Optional) Super Glue
+- (Optional) Soldering Iron and Solder 
 ### 3D printing instructions
  - Print the STLs in the Camera Case V2 folder  (hardware > Camera_Case > STL > V2)
  - It is recommended you use 20% infill with any choice of filament
-### Assembly Instructions without IR LEDs
- 1) Once all things are printed use 4 hex M2x5mm screws and nuts to mount the camera to the camera mount 3D Printed Part
- 2) Mount Raspberry Pi to the Camera Case Body using 4 M3x5mm screws and nuts 
- 3) Plug the Camera into the Raspberry PI Zero making sure the cable stays within the Camera Case body
+### Assembly Instructions <i>without</i> IR LEDs
+ 1) Mount Raspberry Pi to the Camera Case Body using 4 M2x6mm Screws and 4 M2 Nuts.
+ 2) Next we need to place the magnets in the case, to do this get a small hammer and gently place them into the holes at the top of the case and in the bottom of the filter mount. Make sure magnets in case and the filter mount are oppositely polarized! Take your time with this step.
+<p align="center">
+   <img  height="300" src="/readme_img/step_1_assembly_process.gif">
+</p>
+
+ 2) Use 4 hex M2x6mm Screws and 4 M2 Nuts to mount the camera to the camera mount 3D Printed Part.
+ 3) Plug the Camera into the Raspberry PI Zero making sure the cable stays within the Camera Case body.
  4) Screw the camera mount into the main case for the Raspberry PI with M3x5mm screws
- 5) Next we need to place the magnets in the case, to do this get a small hammer and gently place them into the holes at the top of the case and in the bottom of the filter mount. Make sure magnets in case and the mount are oppositely polarized! Take your time with this step there is no easy way to remove the magnets so If anything were to happen you may have to discard the case.
+<p align="center">
+   <img  height="300" src="/readme_img/step_2_assembly_process.gif">
+</p>
  6) Similarly to Step 5 place the magnets for filter cover. Again make sure the magnets between the cover and mount are oppositely polarized and take your time with this step.
+<p align="center">
+   <img  height="300" src="/readme_img/step_3_assembly_process.gif">
+</p>
+
+<p align="center">
+   <img  height="300" src="/readme_img/step_4_assembly_process.gif">
+</p>
+
  7) Next follow the instructions to make the PI a usb camera ([link](https://tutorial.cytron.io/2020/12/29/raspberry-pi-zero-usb-webcam/))
- 8) If everything went well you should be able to place the filter mount on top of the main case housing the PI and then plug a usb into the PI and access the camera as a regular USB camera
+ 8) If everything went well you should be able to plug a Micro-USB to USB-Type-A cable into the PI and access the camera as a regular USB camera
+### Assembly Instructions <i>with</i> IR LEDs
+ <i>It is recommended that you have some experience with circuits prior to this assembly.</i>
+ 1) First cut 4 male-to-female jumper wires in half then strip the ends of the wire.
+ 2) Next pre-tin the wires.
+ 3) Next take the tiny 4716AS Osram LEDs and pre-tin the pads on the IR LED.
+ 4) Next Solder two of the male-half jumper (from step 1) wires to the anode and cathode path of IR LED, keep track of which wire is which.
+ 5) Next Solder the 2.2K Resistors to the +5V pad on the PI Zero.
+<p align="center">
+   <img  height="200" src="/readme_img/pi_zero_pads.png">
+</p>
+
+ 6) Now Solder two female-half jumper wires (from step 1) to the ground (GND) pad.
+ 7) Solder one female-half jumper wire to one resistor on the +5V rail and similarly do the same for the other resistor.
+ 8) The result should be 4 female pins soldered to the Raspberry PI, which you can plug the IR LEDs into. 
+ 9) Next follow steps laid out in Assembly Instructions without IR LEDs.
+ 10) Next, glue the IR LEDs to the IR LED cover.
+<p align="center">
+   <img  height="300" src="/readme_img/step_5_assembly_process.gif">
+</p>
+
+ 11) Screw the LED cover onto the filter mount with 8 M3x4mm screws. 
+ 12) If everything went well you should be able to plug a Micro-USB to USB-Type-A cable into the PI and access the camera as a regular USB camera.
