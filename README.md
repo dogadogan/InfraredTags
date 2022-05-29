@@ -128,7 +128,7 @@
  - Raspberry Pi NoIR Camera [(link)](https://www.amazon.com/kuman-Raspberry-Camera-Module-Supports/dp/B0759GYR51/ref=sr_1_25?crid=IJE0D6SB8AQG&keywords=PI+noir+5MP&qid=1653020486&s=electronics&sprefix=pi+noir+5mp%2Celectronics%2C88&sr=1-25)
  - Raspberry Pi Zero [(link)](https://www.raspberrypi.com/products/raspberry-pi-zero/)
  - Micro-USB to USB type A cable [(link)](https://www.amazon.com/AmazonBasics-Male-Micro-Cable-Black/dp/B07232M876/ref=sr_1_3?keywords=micro+usb+to+usb&qid=1653020580&sr=8-3)
- - (Optional) 3D printed camera case to house all parts ([link](#4%20Setting%20up%20the%20USB%20Webcam)) <i>See Section 4 for further instructions on setting up USB webcam</i>
+ - (Optional) 3D printed camera case to house all parts ([link](#4%20Setting%20up%20the%20USB%20Webcam)) <i>See Section 4 for further instructions on setting up the infrared USB webcam</i>
 #### Hardware 
    - Once a Raspberry Pi and near-infrared camera are obtained, follow the instructions in [Section 4](#4%20Setting%20up%20the%20USB%20Webcam) and follow the instructions to set up the pi + camera as a USB camera 
 #### Software
@@ -182,8 +182,8 @@ You should only do this if you want to change the parameters for the ArUco detec
    ```adb shell am start -n com.oneplus.factorymode/.camera.manualtest.CameraManualTest``` (more detail [here](https://www.xda-developers.com/oneplus-8-pro-color-filter-camera-still-accessible-adb-command/))
    - You should see the IR stream open on the OnePlus:
     <p align="center"> <img  height="450" src="https://github.com/HCIELab/InfraTags/blob/main/public/readme_img/oneplus_ir.png"> </p>
-   - Note: if you do not see the IR camera, you may have to change the camera view to camera view 4 as seen in the top right of the image
-   - It is important that once you are in camera view 4/IR camera view do not change views again. The app will freeze and you will need to restart the phone and resend the command to open the IR view again. 
+   - Note: if you do not see the IR camera, you may have to change the camera view to "Fourth rear camera(4)" as seen in the top right of the image
+   - It is important that once you are in the "Fourth rear camera(4)" view, do not change views again. Otherwise, the app will freeze and you will need to restart the phone and resend the command to open the factory camera mode again.
    - Finally, after all this is done navigate to the oneplus folder ([here](https://github.com/HCIELab/InfraTags/tree/main/public/oneplus)) and run oneplus.py. This should open up a window on your PC, livestreaming the phone's screen.
   
 ### Important: QR code detection
@@ -191,7 +191,7 @@ You should only do this if you want to change the parameters for the ArUco detec
  - If you do not renew the license, you will get only partial decoding of messages.
  - To update the license key navigate to the dbr_decode.py file, after obtainign a new license from Dynamsoft, for each demo and change the license key variable (line 4 of dbr_decode.py).
  
-## #4 Setting up the USB Webcam
+## #4 Setting up the infrared USB Webcam
 
 
 <p align="center">
