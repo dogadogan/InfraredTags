@@ -186,7 +186,7 @@ You should only do this if you want to change the parameters for the ArUco detec
 ### Important: QR code detection
  - All the demo code above for detecting QR codes uses [Dynamsoft Barcode Reader (DBR)](https://www.dynamsoft.com/barcode-reader/overview/) in the backend. Our code comes with a 1-day public trial license which must be renewed after expiration. 
  - If you do not renew the license, you will get only partial decoding of messages.
- - To update the license key navigate to the dbr_decode.py file for each demo and change the license key variable (line 4 of dbr_decode.py).
+ - To update the license key navigate to the dbr_decode.py file, after obtainign a new license from Dynamsoft, for each demo and change the license key variable (line 4 of dbr_decode.py).
  
 ## #4 Setting up the USB Webcam
 
