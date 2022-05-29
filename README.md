@@ -219,18 +219,19 @@ You should only do this if you want to change the parameters for the ArUco detec
  - Print the STLs in the Camera Case V2 folder  (hardware > Camera_Case > STL > V2)
  - It is recommended you use 20% infill with any choice of filament
 ### Assembly Instructions <i>without</i> IR LEDs
- 1) Mount Raspberry Pi to the Camera Case Body using 4 M2x6mm Screws and 4 M2 Nuts.
+ 1) Mount Raspberry Pi to the camera case body using 4 M2x6mm screws and 4 M2 nuts.
  2) Next we need to place the magnets in the case, to do this get a small hammer and gently place them into the holes at the top of the case and in the bottom of the filter mount. Make sure magnets in case and the filter mount are oppositely polarized! Take your time with this step.
 <p align="center">
    <img  height="300" src="/readme_img/step_1_assembly_process.gif">
 </p>
 
- 2) Use 4 hex M2x6mm Screws and 4 M2 Nuts to mount the camera to the 3D Printed camera mount.
- 3) Plug the Camera into the Raspberry PI Zero making sure the cable stays within the Camera Case body.
+ 2) Use 4 hex M2x6mm screws and 4 M2 nuts to mount the camera to the 3D printed camera mount.
+ 3) Plug the camera into the Raspberry PI Zero making sure the cable stays within the camera case body.
  4) Screw the camera mount into the main case for the Raspberry PI with two M2x8mm screws.
 <p align="center">
    <img  height="300" src="/readme_img/step_2_assembly_process.gif">
 </p>
+
  6) Similarly to Step 5 place the magnets for filter cover. Again make sure the magnets between the cover and mount are oppositely polarized and take your time with this step.
 <p align="center">
    <img  height="300" src="/readme_img/step_3_assembly_process.gif">
@@ -246,22 +247,22 @@ You should only do this if you want to change the parameters for the ArUco detec
  <i>It is recommended that you have some experience with circuits prior to this assembly.</i>
  1) First cut 4 male-to-female jumper wires in half then strip the ends of the wire.
  2) Next pre-tin the half wires.
- 3) Next take 2 tiny 4716AS Osram LEDs and pre-tin the pads on the IR LED.
- 4) Next Solder two of the male-half jumper (from step 1) wires to the anode and cathode path of IR LED, keep track of which wire is which.
+ 3) Next take 2 tiny 4716AS IR LEDs and pre-tin the pads on the IR LED, make sure not to short them.
+ 4) Next Solder two of the male-half jumper wires (from step 1) to the anode and cathode path of IR LED respectively, keeping track of which wire is which.
  5) Do Step 4 again for the second IR LED.
- 6) Next Solder two of the 2.2K Resistors to the +5V pad on the PI Zero, result is two parallel voltage dividers.
+ 6) Next Solder two of the 2.2K Ohm Resistors to the +5V pad on the PI Zero, resulting in two parallel voltage dividers.
 <p align="center">
    <img  height="200" src="/readme_img/pi_zero_pads.png">
 </p>
 
  6) Now Solder two female-half jumper wires (from step 1) to the ground (GND) pad.
- 7) Solder one female-half jumper wire to one resistor on the +5V rail and similarly do the same for the other resistor.
+ 7) Solder one female-half jumper wire to one of the resistors on the +5V rail and similarly do the same for the other resistor.
  8) The result should be 4 female pins soldered to the Raspberry PI, which you can plug the IR LEDs into. 
  9) Next follow steps laid out in Assembly Instructions without IR LEDs.
- 10) Next, glue the IR LEDs to the IR LED cover.
+ 10) Next, glue the IR LEDs to the IR LED cover (with super glue).
 <p align="center">
    <img  height="300" src="/readme_img/step_5_assembly_process.gif">
 </p>
 
- 11) Screw the LED cover onto the filter mount with 8 M3x4mm screws. 
+ 11) Screw the IR LED covers, with glued LEDs, onto the 3D printed filter mount with 8 M3x4mm screws. 
  12) If everything went well you should be able to plug a Micro-USB to USB-Type-A cable into the PI and access the camera as a regular USB camera.
