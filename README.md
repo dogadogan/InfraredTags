@@ -209,7 +209,7 @@ You should only do this if you want to change the parameters for the ArUco detec
  - (Optional) Male to Female Jumper Wires ([link](https://www.amazon.com/EDGELEC-Breadboard-Optional-Assorted-Multicolored/dp/B07GD2PGY4/ref=sr_1_3?keywords=male%2Bto%2Bfemale%2Bjumper%2Bwires&qid=1653810024&sprefix=male%2Bto%2Bfemale%2Bjump%2Caps%2C74&sr=8-3&th=1))
  - (Optional) 2 2.2K Ohm Resistors ([link](https://www.amazon.com/EDGELEC-Resistor-Tolerance-Multiple-Resistance/dp/B07QH5QTPK/ref=sr_1_3?keywords=2.2k+resistor&qid=1653810071&sprefix=2.2k+resi%2Caps%2C67&sr=8-3))
  - (Optional) 8 M3x4mm screws and nuts ([link](https://www.amazon.com/DYWISHKEY-Pieces-Stainless-Socket-Assortment/dp/B07VNDFYNQ/ref=sr_1_5?keywords=m3+hex+screws&qid=1653810295&sprefix=m3+hex+%2Caps%2C67&sr=8-5))
- - 8 M2x6mm screws and nuts ([link](https://www.amazon.com/DYWISHKEY-Pieces-Socket-Screws-Wrench/dp/B07W5J19Y5/ref=sr_1_3?crid=99RN2D0GXV0G&keywords=m2+hex&qid=1653810350&sprefix=m2+hex%2Caps%2C62&sr=8-3))
+ - 8 M2x6mm and 2 M2x8mm screws and nuts ([link](https://www.amazon.com/DYWISHKEY-Pieces-Socket-Screws-Wrench/dp/B07W5J19Y5/ref=sr_1_3?crid=99RN2D0GXV0G&keywords=m2+hex&qid=1653810350&sprefix=m2+hex%2Caps%2C62&sr=8-3))
  - IR Filter ([link](https://www.amazon.com/Infrared-Filter-58mm-Optical-Glass/dp/B08N8N989H/ref=sr_1_3?crid=37VJY38ITGR7A&keywords=ir+filters&qid=1653810156&sprefix=ir+filters%2Caps%2C56&sr=8-3))
 ### Tools
 - Small Hammer 
@@ -227,7 +227,7 @@ You should only do this if you want to change the parameters for the ArUco detec
 
  2) Use 4 hex M2x6mm Screws and 4 M2 Nuts to mount the camera to the camera mount 3D Printed Part.
  3) Plug the Camera into the Raspberry PI Zero making sure the cable stays within the Camera Case body.
- 4) Screw the camera mount into the main case for the Raspberry PI with M3x5mm screws
+ 4) Screw the camera mount into the main case for the Raspberry PI with two M2x8mm screws.
 <p align="center">
    <img  height="300" src="/readme_img/step_2_assembly_process.gif">
 </p>
