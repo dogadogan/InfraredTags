@@ -1,0 +1,18 @@
+
+PLEASE CAREFULLY READ THE BELOW TERMS AND CONDITIONS BEFORE USING THE INFORMATION. IF YOU DO NOT AGREE WITH ANY OF THESE TERMS AND CONDITIONS, DO NOT USE THE INFORMATION.
+
+The Information shown in the provided documents was produced with due care, but is provided by OSRAM Opto Semiconductors GmbH “as is” and without OSRAM Opto Semiconductors GmbH assuming, express or implied, any warranty or liability whatsoever, including, but not limited to the warranties of correctness, completeness,  merchantability, fitness for a particular purpose, title or non-infringement. In no event shall OSRAM Opto Semiconductors GmbH be liable - regardless of the legal theory - for any direct, indirect, special, incidental, exemplary, consequential, or punitive damages related to the use of the Information. This limitation shall apply even if OSRAM Opto Semiconductors GmbH has been advised of possible damages.  As some jurisdictions do not allow exclusion of certain warranties or limitations of liability, the above limitations or exclusions may not apply. The liability of OSRAM Opto Semiconductors GmbH would in such case be limited to the greatest extent permitted by law.
+
+OSRAM Opto Semiconductors GmbH may change the Information at anytime without notice to user and is not obligated to provide any maintenance or support related to the Information. The Information is based on specific Conditions and, therefore, alterations to the Information can not be excluded.
+
+Any rights not expressly granted herein are reserved. Except for the right to use the Information included in this document, no other rights are granted nor shall any obligation be implied requiring the grant of further rights. Any and all rights or licenses to patents or patent applications are expressly excluded.  
+
+Further explanations:
+
+Information: The information provided consists of rayfile data, CAD data, spectrum data, documentation.
+
+Document: The documents have the purpose to make optical simulation and design.
+
+Conditions: The conditions which the Information is based on: The provided data represents one single LED and may in reality not represent the complete possible variation range of all component parameters. Therefore, in certain cases a deviation between the real emission characteristic and the emission characteristic which is encoded in the provided rayfile data could occur.
+
+Recommendation for use of the Products, Safety recommendations: The documentation provided with the rayfile data has to be considered.
