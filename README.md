@@ -225,7 +225,7 @@ You should only do this if you want to change the parameters for the ArUco detec
    <img  height="300" src="/readme_img/step_1_assembly_process.gif">
 </p>
 
- 2) Use 4 hex M2x6mm Screws and 4 M2 Nuts to mount the camera to the camera mount 3D Printed Part.
+ 2) Use 4 hex M2x6mm Screws and 4 M2 Nuts to mount the camera to the 3D Printed camera mount.
  3) Plug the Camera into the Raspberry PI Zero making sure the cable stays within the Camera Case body.
  4) Screw the camera mount into the main case for the Raspberry PI with two M2x8mm screws.
 <p align="center">
