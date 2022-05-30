@@ -32,7 +32,7 @@
     <img  height=  "200" src="https://github.com/HCIELab/InfraTags/blob/main/public/readme_img/setting.png">
 </p>
 
-#### 5) In case you run the case elsewhere, there might be a problem when dealing with ArUCo. The normal opencv library does not support ArUCo. You should uninstall opencv-python and install opencv-contrib-python instead. The notebook on Kaggle has already dealed with this problem, and you can skip this step.
+#### 5) In case you run the code elsewhere, there might be a problem when dealing with ArUCo. The normal opencv library does not support ArUCo. You should uninstall opencv-python and install opencv-contrib-python instead. The notebook on Kaggle has already dealed with this problem, and you can skip this step.
 
 #### 6) UNet. The binarization model that we use is UNet. The architecture is as follows. You only need to specify in_channels and out_channels when initiating a model. Still, keep in mind that the size of the training image must be divisible by 16 because UNet performs maxpooling 4 times.
 
