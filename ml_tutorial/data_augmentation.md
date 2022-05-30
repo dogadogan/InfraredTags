@@ -23,7 +23,13 @@ Note that the training set is augmented, but the validating and testing sets are
 
 ## Tutorial
 
-#### 1) Change the name of the saving directory `save_dir`.
+#### 1) Change the desired size of augmented image. The width-height ratio of the augmented image should be the same as generated image, so that the augmented image is not distorted and make the code undetectable.
+
+```python
+size_wh = (144,96)
+```
+
+#### 2) Change the name of the saving directory `save_dir`.
 
 ```python
 save_dir = 'temp/'
@@ -35,7 +41,7 @@ Path(save_dir + 'val/input').mkdir(parents=True, exist_ok=False)
 Path(save_dir + 'val/output').mkdir(parents=True, exist_ok=False)
 ```
 
-#### 2) List all paths to `dataset_images_ml`, all table files `image_dataset.csv`, and types. All `dataset_images_ml` and `image_dataset.csv` are generated during data generation process. The order of elements in the three lists must correspond to the same generated data. For ArUco, type is the ID of ArUco code in the corresponding images and table files. For QR codes, type is the number we labeled for QR codes in our case. Below is the example.
+#### 3) List all paths to `dataset_images_ml`, all table files `image_dataset.csv`, and types. All `dataset_images_ml` and `image_dataset.csv` are generated during data generation process. The order of elements in the three lists must correspond to the same generated data. For ArUco, type is the ID of ArUco code in the corresponding images and table files. For QR codes, type is the number we labeled for QR codes in our case. Below is the example.
 
 ```python
 paths = [\
@@ -55,15 +61,15 @@ table_files = [\
 types = [1,1,1,3]
 ```
 
-#### 3) Include the following three lines. If you are working on ArUco, put `aruco=True`; otherwise put `aruco=False`.
+#### 4) Include the following three lines. If you are working on ArUco, put `aruco=True`; otherwise put `aruco=False`. We recommend using `qr='dbr'` since it is the best detector, but you can also use `qr='pyzbar'` or `qr='wechat'`.
 
 ```python
-save_augmentation_all(paths, table_files, types, save_dir, 'test', aruco=True)
-save_augmentation_all(paths, table_files, types, save_dir, 'train', aruco=True)
-save_augmentation_all(paths, table_files, types, save_dir, 'val', aruco=True)
+save_augmentation_all(paths, table_files, types, save_dir, 'test', size_wh, qr='dbr',, aruco=True)
+save_augmentation_all(paths, table_files, types, save_dir, 'train', size_wh, qr='dbr', aruco=True)
+save_augmentation_all(paths, table_files, types, save_dir, 'val', size_wh, qr='dbr',aruco=True)
 ```
 
-#### 4) Run `python3 augmentation.py` 
+#### 5) Run `python3 augmentation.py` 
 
 #### Augmented data
 ```
