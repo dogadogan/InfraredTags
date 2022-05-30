@@ -65,4 +65,22 @@ save_augmentation_all(paths, table_files, types, save_dir, 'val', aruco=True)
 
 #### 4) Run `python3 augmentation.py` 
 
+#### Augmented data
+```
+ml
+└── save_dir                    
+    ├──test
+    │  ├──image_dataset.csv
+    │  ├──input
+    │  └──output
+    ├──train
+    │  ├──image_dataset.csv
+    │  ├──input
+    │  └──output
+    └──val
+       ├──image_dataset.csv
+       ├──input
+       └──output    
+```
 
+The augmented data is  separated into `test`, `train`, and `val`. `image_dataset.csv` stores metadata of data in that directory.
