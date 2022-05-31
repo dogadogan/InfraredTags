@@ -8,7 +8,7 @@ The goal of the ML modules is to turn a low-resolution IR image to a binary imag
 
 1. [Data Generation](https://github.com/dogadogan/InfraredTags/blob/main/ml_tutorial/data_generation.md)
 
-    Generate image from videos. The image is split into test, val, and train.
+    Generate images from videos. The images are split into test, val, and train.
 
 
 2. [Data Augmentation](https://github.com/dogadogan/InfraredTags/blob/main/ml_tutorial/data_augmentation.md)
@@ -18,7 +18,7 @@ The goal of the ML modules is to turn a low-resolution IR image to a binary imag
 
 3. [Train](https://github.com/dogadogan/InfraredTags/blob/main/ml_tutorial/train.md)
 
-    Train the Unet model.
+    Train the Unet model with the augmented data.
 
 
 4. [Deploy](https://github.com/dogadogan/InfraredTags/blob/main/ml_tutorial/deploy.md)
