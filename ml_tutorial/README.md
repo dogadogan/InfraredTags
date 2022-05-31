@@ -1,7 +1,7 @@
 # Overview
 
 <p align="center">
-   <img src="https://github.com/HCIELab/InfraTags/blob/main/public/readme_img/overview.png">
+   <img src="https://github.com/HCIELab/InfraTags/blob/main/public/readme_img/overview.jpg">
 </p>
 
 # Machine Learning Tutorial
