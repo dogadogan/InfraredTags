@@ -1,7 +1,7 @@
 # Overview
 
 <p align="center">
-   <img src="https://github.com/dogadogan/InfraredTags/tree/main/readme_img/overview.jpg">
+   <img src="https://github.com/dogadogan/InfraredTags/tree/main/readme_img/workflow.png">
 </p>
 
 # Machine Learning Tutorial
