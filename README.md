@@ -105,7 +105,7 @@
 #### 2) Import both models (IR PLA and regular PLA)
 
 <p align="center">
-   <img  height="200" src="=/readme_img/slr_import.png">
+   <img  height="200" src="/readme_img/slr_import.png">
 </p>
 
 #### 3) Arrange and slice   
