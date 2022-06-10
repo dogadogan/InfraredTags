@@ -105,7 +105,7 @@
 #### 2) Import both models (IR PLA and regular PLA)
 
 <p align="center">
-   <img  height="200" src="https://github.com/HCIELab/InfraTags/blob/main/public/readme_img/slr_import.png">
+   <img  height="200" src="=/readme_img/slr_import.png">
 </p>
 
 #### 3) Arrange and slice   
@@ -181,7 +181,7 @@ You should only do this if you want to change the parameters for the ArUco detec
    - Once everything is installed, and you have paired the OnePlus phone to your computer via adb, you can run this command to get the IR camera show up:
    ```adb shell am start -n com.oneplus.factorymode/.camera.manualtest.CameraManualTest``` (more detail [here](https://www.xda-developers.com/oneplus-8-pro-color-filter-camera-still-accessible-adb-command/))
    - You should see the IR stream open on the OnePlus:
-    <p align="center"> <img  height="450" src="https://github.com/HCIELab/InfraTags/blob/main/public/readme_img/oneplus_ir.png"> </p>
+    <p align="center"> <img  height="450" src="/readme_img/oneplus_ir.png"> </p>
    - Note: if you do not see the IR camera, you may have to change the camera view to "Fourth rear camera(4)" as seen in the top right of the image
    - It is important that once you are in the "Fourth rear camera(4)" view, do not change views again. Otherwise, the app will freeze and you will need to restart the phone and resend the command to open the factory camera mode again.
    - Finally, after all this is done navigate to the oneplus folder ([here](https://github.com/HCIELab/InfraTags/tree/main/public/oneplus)) and run oneplus.py. This should open up a window on your PC, livestreaming the phone's screen.
