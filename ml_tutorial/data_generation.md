@@ -24,10 +24,11 @@ This parameter scale down the resolution of the frame cut from the video. Usuall
    <img src="https://github.com/HCIELab/InfraTags/blob/main/public/readme_img/scale.png">
 </p>
 
-#### 2) Run `python3 data_generation.py -i filename -m mode -f fpr`
+#### 2) Run `python3 data_generation.py -i filename -m mode -f fpr -d ID`
 - filename: The path to the video that we want to generate data from
 - mode: **dbr** for QR codes. **aruco** for ArUco. There are other modes for Qr codes. **pyzbar** is public but detects worse than dbr. **wechat** uses ML approach, and takes very long time.
 - fpr: frame per read.
+- ID: the ID of ArUco code. This argument is not needed in case of a QR code.  
 
 #### Generated data
 ```
