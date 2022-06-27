@@ -1,5 +1,3 @@
-from distutils.command.install_egg_info import install_egg_info
-from torch import _index_put_impl_
 import torchvision.transforms as T
 import torchvision.transforms.functional as TF
 import random
