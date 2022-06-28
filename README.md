@@ -43,17 +43,17 @@
 #### 4) Double click the Find Mesh Centroid panel. (The green box in the image below). Then click OK on the pop-up window shown below.
 
 <p align="center">
-  <img  height="200" src="/readme_img/centroid.png">
+  <img  height="400" src="/readme_img/centroid.png">
 </p>
 
 <p align="center">
-  <img  height="200" src="/readme_img/popup.png">
+  <img  height="400" src="/readme_img/popup.png">
 </p>
 
 #### 5) Right click either the Single Material or Multiple Material and IR Filament. Then click Preview. You should see a Rhino object with a code embedded on it.
 
 <p align="center">
-  <img  height="200" src="/readme_img/preview.png">
+  <img  height="400" src="/readme_img/preview.png">
 </p>
 
 <p align="center">
