@@ -40,7 +40,21 @@
   <img  height="200" src="/readme_img/inputs_svg.png">
 </p>
 
-- Once imported you should see this:
+#### 4) Double click the Find Mesh Centroid panel. (The green box in the image below). Then click OK on the pop-up window shown below.
+
+<p align="center">
+  <img  height="200" src="/readme_img/centroid.png">
+</p>
+
+<p align="center">
+  <img  height="200" src="/readme_img/popup.png">
+</p>
+
+#### 5) Right click either the Single Material or Multiple Material and IR Filament. Then click Preview. You should see a Rhino object with a code embedded on it.
+
+<p align="center">
+  <img  height="200" src="/readme_img/preview.png">
+</p>
 
 <p align="center">
   <img  height="200" src="/readme_img/output_sm_labeled.png">
@@ -49,9 +63,9 @@
     <sup>Rhino object with code embedded in it. Point is used to orient the code over the object.</sup>
 </p>
 
-#### 4) Move the tag as desired
+#### 6) Move the tag as desired
    - Change the xyz coordinate of the point to move the code around on the surface of the object.
-   - The best way to move a point is to simply set the coordinates by right clicking "Pt" on the inputs panel and then going to manage collection and typing a new point.
+   - The best way to move a point is to simply set the coordinates by right clicking "Pt" on the inputs panel and then going to Manage Point Collection and typing a new point.
    - Due to a bug in the code, it is best to keep the point in the positive z-axis.
 
 
@@ -63,14 +77,14 @@
 </p>
 
 
-#### 5) Set top layer thickness and air gap (tag) thickness
+#### 7) Set top layer thickness and air gap (tag) thickness
    - We used 1.38mm and 1.92mm for White PLA and IR PLA, respectively.
    - However, we recommend that you calibrate these values by first printing a test checkerboard as shown in the CHI'22 paper.
 
-#### 6) Export generated STLs:
+#### 8) Export generated STLs:
    - For single-material, right click "single material" and click "bake". For multi-material, right click on both "multi material" and "IR filament".
    - A black wire mesh should appear in the perspective screen.
-   - Simply highlight it with your mouse then navigate to File > Export selected and save somewhere in your file system.
+   - Simply highlight it with your mouse then navigate to File > Export Selected and save somewhere in your file system.
    - Note: For multi-material, you need to bake and export each mesh separately. That way, you will have both the internal PLA component and the outer IR PLA component. 
 <p align="center">
    <img  height="200" src="/readme_img/sm_save.png">
