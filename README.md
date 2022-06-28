@@ -17,11 +17,13 @@
 <sup>Our method allows users to embed (a) QR codes and (b) ArUco markers to store information in objects or to track them. The hidden markers are decoded from infrared camera images (c) using a convolutional neural network based on U-Net.</sup>
 
 ## #1 CAD: Adding the tag into the object
+The tagged objects can be 3D printed using a single-material approach (only IR PLA) or a multi-material approach (IR PLA + regular white PLA). While both methods are described in the paper, we highly recommend that you use the multi-material approach.
+
 ### Requirements
 - Rhino 3D (make sure it is version 6) and [Grasshopper 3D](https://www.rhino3d.com/download/archive/rhino-for-windows/6/latest/)
         - Once installed, follow the instructions to install the [Pufferfish plugin](https://github.com/HCIELab/InfraTags/tree/main/public/encoder/plugins/Pufferfish3-0)
 - Python and IDE (Any IDE will work, however, we use [PyCharm](https://www.jetbrains.com/pycharm/download/#section=windows))
-- The instructions below are for the multi-material printing method, which gives the best results.
+
 ### Using the encoder
 #### 1) Open the Encoder_V1.gh file
 <p align="center">
