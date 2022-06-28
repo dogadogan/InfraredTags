@@ -50,7 +50,13 @@
   <img  height="400" src="/readme_img/popup.png">
 </p>
 
-#### 5) Right click either the Single Material or Multiple Material and IR Filament. Then click Preview. You should see a Rhino object with a code embedded on it.
+#### 5) Render object
+
+   - For single material, right click the Single Material panel, then click Preview. 
+   
+   - For multi material, right click the Multiple Material panel, and click Preview. Also, right click the IR Filament panel, click Preview. 
+   
+   - After this, you should see a Rhino object with a code embedded on it.
 
 <p align="center">
   <img  height="400" src="/readme_img/preview.png">
