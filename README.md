@@ -91,14 +91,16 @@
 </p>
 <p align="center">
    <img  height="200" src="/readme_img/sm_mesh.png">
+   <br>
+   <sup>Object mesh with code inside</sup>
 </p>
-<p align="center">
-    <sup>Object mesh with code inside</sup>
-</p>
+
 <p align="center">
    <img  height="200" src="/readme_img/code_mesh.png">
+   <br>
+   <sup>Code mesh</sup>
 </p>
-<sup>Code mesh</sup>
+
 
 #### Important: SVG formating
    - To format the SVG you have two options:
