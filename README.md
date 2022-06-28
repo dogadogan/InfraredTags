@@ -57,12 +57,12 @@ The tagged objects can be 3D printed using a single-material approach (only IR P
    - For single material, right click the Single Material panel, then click Preview. 
    
    - For multi material, right click the Multiple Material panel, and click Preview. Also, right click the IR Filament panel, click Preview. 
-   
-   - After this, you should see a Rhino object with a code embedded on it.
 
 <p align="center">
   <img  height="400" src="/readme_img/preview.png">
 </p>
+
+   - After this, you should see a Rhino object with a code embedded on it.
 
 <p align="center">
   <img  height="200" src="/readme_img/output_sm_labeled.png">
