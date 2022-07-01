@@ -54,9 +54,9 @@ The tagged objects can be 3D printed using a single-material approach (only IR P
 
 #### 5) Render object
 
-   - For single material, right click the Single Material panel, then click Preview. 
+   - For the single-material approach, right click the "Single Material" panel shown below, then click Preview. 
    
-   - For multi material, right click the Multiple Material panel, and click Preview. Also, right click the IR Filament panel, click Preview. 
+   - For the multi-material approach, right click the "Multiple Material" panel shown below and click Preview. Similarly, right click the "IR Filament" panel, click Preview. 
 
 <p align="center">
   <img  height="400" src="/readme_img/preview.png">
