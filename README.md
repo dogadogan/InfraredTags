@@ -166,7 +166,8 @@ The tagged objects can be 3D printed using a single-material approach (only IR P
       - dbr
       - opencv-contrib-python
       - pyzbar
-
+#### ML Module
+   The goal of the ML modules is to turn a low-resolution IR image to a binary image where the code is detectable. You can access the ML tutorial via this [link](https://github.com/dogadogan/InfraredTags/tree/main/ml_tutorial).
 
 ## Using the decoder
 ### Reading QR codes
