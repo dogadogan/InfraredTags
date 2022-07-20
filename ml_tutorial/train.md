@@ -2,11 +2,11 @@
 
 ## Kaggle Notebook
 
-[Kaggle Notebook](https://www.kaggle.com/code/veerapatr/train-dbr-default/notebook)
+[Kaggle Notebook](https://www.kaggle.com/veerapatr/train-module)
 
 ## Tutorial
 
-#### 1) Create Kaggle account, and ask for permission to access the notebook. (Send an email to veerapatr.yot@gmail.com?)
+#### 1) Create Kaggle account, and access the above Notebook.
 
 #### 2) Fork the notebook by clicking the Copy and Edit button. The Edit button in the below image should be replaced by the Copy and Edit button in your view.
 <p align="center">
@@ -39,6 +39,8 @@
 <p align="center">
     <img  height=  "300" src="https://github.com/HCIELab/InfraTags/blob/main/public/readme_img/unet_simple.png">
 </p>
+
+#### 7) Find the function called `get_dbr_detector`. You will have to add your DBR license in this function.
 
 #### 8) Below is the code for training the model.
 ```python
