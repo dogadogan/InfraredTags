@@ -195,8 +195,8 @@ You should only do this if you want to change the parameters for the ArUco detec
    - A window with a panel should open on the right play around with the values until a code is detected 
    - Take note of these values, these values can be used to change the parameters for the image transforms
 
-#### Machine learning for code detection
-   We have also developed machine learning (ML) modules for turning a low-resolution IR image to a binary image where the code is more easily detected. You can access the ML tutorials via [this link](/tree/main/ml_tutorial).
+### Machine learning for code detection
+   We have also developed machine learning (ML) modules for turning a low-resolution IR image to a binary image where the code is more easily detected using a convolutional neural network (CNN). You can access the ML tutorials via [this link](/ml_tutorial).
    
 ### Optional: Using a smartphone to decode the tags
    #### Hardware
