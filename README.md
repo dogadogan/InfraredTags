@@ -1,6 +1,6 @@
 # InfraredTags: Invisible AR Markers and Barcodes
 
-   In this tutorial, we show how InfraredTags can be fabricated and decoded using low-cost, infrared-based 3D printing and imaging tools. While any 2D marker can be embedded as InfraredTags, we demonstrate the process for QR codes and ArUco markers. This research project has been published at the [2022 ACM CHI](https://chi2022.acm.org/) Conference on Human Factors in Computing Systems. Learn more about the project [here](https://hcie.csail.mit.edu/research/infraredtags/infraredtags.html).
+   In this tutorial, we show how InfraredTags can be fabricated and decoded using low-cost, infrared-based 3D printing and imaging tools. While any 2D marker can be embedded as InfraredTags, we demonstrate the process for QR codes and ArUco markers. This research project has been published at the [**2022 ACM CHI**](https://chi2022.acm.org/) Conference on Human Factors in Computing Systems. Learn more about the project [here](https://hcie.csail.mit.edu/research/infraredtags/infraredtags.html).
    
    <sub>By [Mustafa Doga Dogan](https://www.dogadogan.com/)\*, Ahmad Taka\*, Veerapatr Yotamornsunthorn\*, Michael Lu\*, [Yunyi Zhu](http://www.yunyizhu.info/)\*, Akshat Kumar\*, [Aakar Gupta](https://aakargupta.com/)†, [Stefanie Mueller](https://hcie.csail.mit.edu/stefanie-mueller.html)\*</sub>
    
@@ -42,7 +42,7 @@ The tagged objects can be 3D printed using a single-material approach (only IR P
   <img  height="200" src="/readme_img/inputs_svg.png">
 </p>
 
-#### 4) Double click the Find Mesh Centroid panel. (The green box in the image below). Then click OK on the pop-up window shown below.
+#### 4) Double click the Find Mesh Centroid panel (the green box in the image below). Then click OK on the pop-up window shown below.
 
 <p align="center">
   <img  height="400" src="/readme_img/centroid.png">
@@ -89,7 +89,7 @@ The tagged objects can be 3D printed using a single-material approach (only IR P
    - We used 1.38mm and 1.92mm for White PLA and IR PLA, respectively.
    - However, we recommend that you calibrate these values by first printing a test checkerboard as shown in the CHI'22 paper.
 
-#### 8) Export generated STLs:
+#### 8) Export generated STL files
    - For single-material, right click "single material" and click "bake". For multi-material, right click on both "multi material" and "IR filament".
    - A black wire mesh should appear in the perspective screen.
    - Simply highlight it with your mouse then navigate to File > Export Selected and save somewhere in your file system.
@@ -148,13 +148,16 @@ The tagged objects can be 3D printed using a single-material approach (only IR P
 
 
 ## #3 Detection: Reading the tags
+
+You will need a near-infrared (NIR) camera to be able to image and read the tags. Below we describe how you can build your own NIR camera and use our image processing pipeline to use the NIR stream as input for detection. Alternatively, you can use a smartphone that has an NIR camera as well, such as OnePlus 8 Pro (see [this section](#optional-using-a-smartphone-to-decode-the-tags)).
+
 #### Materials
- - Raspberry Pi NoIR Camera [(link)](https://www.amazon.com/kuman-Raspberry-Camera-Module-Supports/dp/B0759GYR51/ref=sr_1_25?crid=IJE0D6SB8AQG&keywords=PI+noir+5MP&qid=1653020486&s=electronics&sprefix=pi+noir+5mp%2Celectronics%2C88&sr=1-25)
- - Raspberry Pi Zero [(link)](https://www.raspberrypi.com/products/raspberry-pi-zero/)
- - Micro-USB to USB type A cable [(link)](https://www.amazon.com/AmazonBasics-Male-Micro-Cable-Black/dp/B07232M876/ref=sr_1_3?keywords=micro+usb+to+usb&qid=1653020580&sr=8-3)
- - (Optional) 3D printed camera case to house all parts ([link](#4%20Setting%20up%20the%20USB%20Webcam)) <i>See Section 4 for further instructions on setting up the infrared USB webcam</i>
+ - Raspberry Pi NoIR Camera [(link)](https://www.amazon.com/kuman-Raspberry-Camera-Module-Supports/dp/B0759GYR51/)
+ - Raspberry Pi Zero [(link)](https://www.raspberrypi.com/products/raspberry-pi-zero-w/)
+ - Micro-USB to USB type A cable [(link)](https://www.amazon.com/AmazonBasics-Male-Micro-Cable-Black/dp/B07232M876/)
+ - (Optional) 3D printed camera case to house all parts ([see Section 4](#4-setting-up-the-infrared-usb-webcam))
 #### Hardware 
-   - Once a Raspberry Pi and near-infrared camera are obtained, follow the instructions in [Section 4](#4%20Setting%20up%20the%20USB%20Webcam) and follow the instructions to set up the pi + camera as a USB camera 
+   - Once a Raspberry Pi and near-infrared camera are obtained, follow the instructions in [Section 4](#4-setting-up-the-infrared-usb-webcam) and follow the instructions to set up the Pi + camera as a USB camera 
 #### Software
    - It is recommended that you use pycharm to run the decoder demos both for QR and Aruco, however the code can be run from a terminal 
    - Have Python 3 and pip3 pre-installed on your system link for this is [here](https://www.python.org/downloads/) version 3.6 or greater should work just fine
@@ -166,8 +169,6 @@ The tagged objects can be 3D printed using a single-material approach (only IR P
       - dbr
       - opencv-contrib-python
       - pyzbar
-#### ML Module
-   The goal of the ML modules is to turn a low-resolution IR image to a binary image where the code is detectable. You can access the ML tutorial via this [link](https://github.com/dogadogan/InfraredTags/tree/main/ml_tutorial).
 
 ## Using the decoder
 ### Reading QR codes
@@ -193,7 +194,10 @@ You should only do this if you want to change the parameters for the ArUco detec
      - <i>VIDEO_STREAM = 1 works, depending on the computer. On some computers it can be 0 or 2 etc. based on if there is one or more internal webcams. </i>
    - A window with a panel should open on the right play around with the values until a code is detected 
    - Take note of these values, these values can be used to change the parameters for the image transforms
-  
+
+#### Machine learning for code detection
+   We have also developed machine learning (ML) modules for turning a low-resolution IR image to a binary image where the code is more easily detected. You can access the ML tutorials via [this link](/tree/main/ml_tutorial).
+   
 ### Optional: Using a smartphone to decode the tags
    #### Hardware
    - OnePlus 8 Pro (found [here](https://www.oneplus.com/8-pro)) with Android 11. This phone has an embedded near-infrared camera. You can buy a used one from Amazon.
@@ -228,17 +232,17 @@ You should only do this if you want to change the parameters for the ArUco detec
 
 ### Required hardware
 <i>Optional items or tools are for the addition of IR LEDs</i>
- - 1 Raspberry Pi NoIR Camera [(link)](https://www.amazon.com/kuman-Raspberry-Camera-Module-Supports/dp/B0759GYR51/ref=sr_1_25?crid=IJE0D6SB8AQG&keywords=PI+noir+5MP&qid=1653020486&s=electronics&sprefix=pi+noir+5mp%2Celectronics%2C88&sr=1-25)
+ - 1 Raspberry Pi NoIR Camera [(link)](https://www.amazon.com/kuman-Raspberry-Camera-Module-Supports/dp/B0759GYR51/)
  - 1 Raspberry Pi Zero [(link)](https://www.raspberrypi.com/products/raspberry-pi-zero/)
- - 1 Micro-USB to USB type A cable [(link)](https://www.amazon.com/AmazonBasics-Male-Micro-Cable-Black/dp/B07232M876/ref=sr_1_3?keywords=micro+usb+to+usb&qid=1653020580&sr=8-3)
- - 8 3mm x 2mm Neodymium magnets ([link](https://www.amazon.com/MEALOS-Magnets-3mmx2mm-Miniatures-Storage/dp/B08NZTN426/ref=sr_1_4?keywords=3x2+neodymium+magnets&qid=1653776539&sprefix=3x2+ne%2Caps%2C69&sr=8-4))
- - 8 6mm x 3mm Neodymium magnets ([link](https://www.amazon.com/FINDMAG-Magnets-Magnetic-Whiteboard-Refrigerator/dp/B08M3YP56J/ref=sr_1_5?keywords=6x3+neodymium+magnets&qid=1653776634&sprefix=6x3+ne%2Caps%2C58&sr=8-5))
+ - 1 Micro-USB to USB type A cable [(link)](https://www.amazon.com/AmazonBasics-Male-Micro-Cable-Black/dp/B07232M876/)
+ - 8 3mm x 2mm Neodymium magnets ([link](https://www.amazon.com/MEALOS-Magnets-3mmx2mm-Miniatures-Storage/dp/B08NZTN426/))
+ - 8 6mm x 3mm Neodymium magnets ([link](https://www.amazon.com/FINDMAG-Magnets-Magnetic-Whiteboard-Refrigerator/dp/B08M3YP56J/))
  - (Optional) 2 OSRam IR LEDs 4716AS ([link](https://www.osram.com/ecat/OSLON%C2%AE%20Black%20SFH%204716AS/com/en/class_pim_web_catalog_103489/prd_pim_device_2219877/))
- - (Optional) Male to Female Jumper Wires ([link](https://www.amazon.com/EDGELEC-Breadboard-Optional-Assorted-Multicolored/dp/B07GD2PGY4/ref=sr_1_3?keywords=male%2Bto%2Bfemale%2Bjumper%2Bwires&qid=1653810024&sprefix=male%2Bto%2Bfemale%2Bjump%2Caps%2C74&sr=8-3&th=1))
- - (Optional) 2 2.2K Ohm Resistors ([link](https://www.amazon.com/EDGELEC-Resistor-Tolerance-Multiple-Resistance/dp/B07QH5QTPK/ref=sr_1_3?keywords=2.2k+resistor&qid=1653810071&sprefix=2.2k+resi%2Caps%2C67&sr=8-3))
- - (Optional) 8 M3x4mm screws and nuts ([link](https://www.amazon.com/DYWISHKEY-Pieces-Stainless-Socket-Assortment/dp/B07VNDFYNQ/ref=sr_1_5?keywords=m3+hex+screws&qid=1653810295&sprefix=m3+hex+%2Caps%2C67&sr=8-5))
- - 8 M2x6mm and 2 M2x8mm screws and nuts ([link](https://www.amazon.com/DYWISHKEY-Pieces-Socket-Screws-Wrench/dp/B07W5J19Y5/ref=sr_1_3?crid=99RN2D0GXV0G&keywords=m2+hex&qid=1653810350&sprefix=m2+hex%2Caps%2C62&sr=8-3))
- - IR Filter ([link](https://www.amazon.com/Infrared-Filter-58mm-Optical-Glass/dp/B08N8N989H/ref=sr_1_3?crid=37VJY38ITGR7A&keywords=ir+filters&qid=1653810156&sprefix=ir+filters%2Caps%2C56&sr=8-3))
+ - (Optional) Male to Female Jumper Wires ([link](https://www.amazon.com/EDGELEC-Breadboard-Optional-Assorted-Multicolored/dp/B07GD2PGY4/))
+ - (Optional) 2 2.2K Ohm Resistors ([link](https://www.amazon.com/EDGELEC-Resistor-Tolerance-Multiple-Resistance/dp/B07QH5QTPK/))
+ - (Optional) 8 M3x4mm screws and nuts ([link](https://www.amazon.com/DYWISHKEY-Pieces-Stainless-Socket-Assortment/dp/B07VNDFYNQ/))
+ - 8 M2x6mm and 2 M2x8mm screws and nuts ([link](https://www.amazon.com/DYWISHKEY-Pieces-Socket-Screws-Wrench/dp/B07W5J19Y5/))
+ - IR Filter ([link](https://www.amazon.com/Infrared-Filter-58mm-Optical-Glass/dp/B08N8N989H/))
 ### Tools
 - Small Hammer 
 - (Optional) Super Glue
