@@ -171,6 +171,8 @@ You will need a near-infrared (NIR) camera to be able to image and read the tags
       - pyzbar
 
 ## Using the decoder
+You can use our image processing scripts to binarize the raw infrared image using several filters and subsequently pass them to the QR code or ArUco marker reader. Please note that these filters may need manual calibration based on physical conditions (e.g., camera distance, lighting). We have also developed a machine learning (ML) model to make the binarization process more robust by collecting a dataset and training a neural network. You can find more details on the ML approach [here](#machine-learning-for-code-detection).
+
 ### Reading QR codes
    - Navigate to qr_demo > qr_demo.py 
    - Open the file in an editor
@@ -196,7 +198,7 @@ You should only do this if you want to change the parameters for the ArUco detec
    - Take note of these values, these values can be used to change the parameters for the image transforms
 
 ### Machine learning for code detection
-   We have also developed machine learning (ML) modules for turning a low-resolution IR image to a binary image where the code is more easily detected using a convolutional neural network (CNN). You can access the ML tutorials via [this link](/ml_tutorial).
+   We have also developed machine learning (ML) modules for turning a low-resolution IR image to a binary image where the code is more easily detected using a convolutional neural network (CNN). You can access the ML tutorials in [the related subdirectory](/ml_tutorial).
    
 ### Optional: Using a smartphone to decode the tags
    #### Hardware
