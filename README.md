@@ -12,7 +12,7 @@
 
 
 <p align="center">
-  <img  height="290" src="readme_img/InfraredTags_Teaser.png">
+  <img  width="830" height="290" src="readme_img/InfraredTags_Teaser.png">
 </p>
 <sup>Our method allows users to embed (a) QR codes and (b) ArUco markers to store information in objects or to track them. The hidden markers are decoded from infrared camera images (c) using a convolutional neural network based on U-Net.</sup>
 
