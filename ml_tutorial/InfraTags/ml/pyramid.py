@@ -219,8 +219,7 @@ def demo(filters, height, num, aruco=True):
     '''
 
     detector = get_dbr_detector()
-    cap = cv2.VideoCapture('../opencv/movies_2/holo_AR3.mp4')
-    # cap = cv2.VideoCapture(cameraID)
+    cap = cv2.VideoCapture(cameraID)
     while cap.isOpened():
         # read frame
         start = time()
